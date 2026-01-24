@@ -1,0 +1,1001 @@
+id,placa,fecha_registro,estado_ANT,ubicacion_camara,peaje_ciudad
+1,GQK-0569,2021-03-07 18:14:32,Habilitada,Quito,Peaje Oyacoto
+2,HLR-5369,2025-10-15 05:41:34,Habilitada,Guayaquil,Peaje Yaguachi
+3,JRF-8042,2020-06-12 17:01:21,Habilitada,Santo Domingo,Peaje Santo Domingo
+4,TRK-1618,2020-10-31 08:50:35,Habilitada,Guayaquil,Peaje Chivería
+5,UUB-2048,2021-11-09 08:13:52,Habilitada,Quito,Peaje Oyacoto
+6,BJV-3378,2021-02-04 09:19:26,Habilitada,Ambato,Peaje San Andrés
+7,ILW-1906,2020-08-19 07:40:09,Habilitada,Quito,Peaje Oyacoto
+8,PWR-7099,2023-10-06 21:13:24,Habilitada,Cuenca,Peaje Chaquilcay
+9,LUI-5437,2021-12-13 23:12:41,Habilitada,Quito,Peaje Rumiñahui
+10,TUM-7031,2020-12-12 01:13:17,Habilitada,Ambato,Peaje San Andrés
+11,IUX-2338,2024-09-28 14:35:24,Habilitada,Ambato,Peaje San Andrés
+12,HNU-6380,2024-08-07 18:12:25,Habilitada,Santo Domingo,Peaje Santo Domingo
+13,TEJ-2778,2022-11-24 12:40:17,Habilitada,Guayaquil,Peaje Chivería
+14,JTW-8310,2023-08-21 00:54:37,Habilitada,Guayaquil,Peaje Yaguachi
+15,HJS-0664,2021-05-12 08:41:48,Habilitada,Santo Domingo,Peaje Santo Domingo
+16,PYQ-9462,2022-11-13 17:59:41,Habilitada,Quito,Peaje Rumiñahui
+17,JDM-6864,2023-11-15 09:37:07,Habilitada,Quito,Peaje Oyacoto
+18,MUW-6304,2025-09-22 00:21:40,Habilitada,Quito,Peaje Oyacoto
+19,XTN-7706,2023-03-03 22:50:40,Suspendida,Santo Domingo,Peaje Santo Domingo
+20,LZG-6413,2025-07-07 20:35:39,Habilitada,Ambato,Peaje San Andrés
+21,CRJ-1431,2025-11-22 13:50:51,Bloqueada,Guayaquil,Peaje Chivería
+22,LAH-6804,2021-10-16 10:30:15,Habilitada,Riobamba,Peaje San Juan
+23,ABH-7849,2025-11-11 16:57:09,Suspendida,Ambato,Peaje San Andrés
+24,PDO-0177,2020-08-26 23:30:04,Habilitada,Guayaquil,Peaje Chivería
+25,CVX-0928,2023-04-21 10:49:17,Habilitada,Santo Domingo,Peaje Santo Domingo
+26,AIS-7711,2025-04-04 11:57:01,Habilitada,Guayaquil,Peaje Yaguachi
+27,IDQ-4644,2020-01-08 21:23:35,Habilitada,Manta,Peaje Manta-Rocafuerte
+28,BKM-7400,2022-03-15 10:49:17,Habilitada,Manta,Peaje Manta-Rocafuerte
+29,HOD-5849,2024-10-11 23:41:18,Habilitada,Machala,Peaje El Garrido
+30,MBT-2156,2024-12-20 17:31:07,Habilitada,Guayaquil,Peaje Yaguachi
+31,MFC-0024,2021-04-11 02:05:56,Habilitada,Machala,Peaje El Garrido
+32,PZC-1167,2020-08-06 13:57:39,Habilitada,Quito,Peaje Oyacoto
+33,BQG-4367,2025-04-08 21:22:48,Habilitada,Santo Domingo,Peaje Santo Domingo
+34,LKF-2747,2022-06-24 17:56:08,Habilitada,Ambato,Peaje San Andrés
+35,BYA-7587,2024-03-12 11:22:20,Habilitada,Guayaquil,Peaje Chivería
+36,TPU-9333,2025-09-30 02:57:44,Habilitada,Ambato,Peaje San Andrés
+37,IEI-4854,2025-09-01 03:43:51,Habilitada,Quito,Peaje Rumiñahui
+38,LGC-5996,2023-08-07 05:21:09,Habilitada,Riobamba,Peaje San Juan
+39,XXG-5565,2021-07-13 01:18:10,Habilitada,Quito,Peaje Oyacoto
+40,HPO-8653,2023-02-09 06:03:35,Habilitada,Machala,Peaje El Garrido
+41,JYR-6257,2022-02-20 02:56:24,Habilitada,Manta,Peaje Manta-Rocafuerte
+42,TDJ-2375,2025-12-16 01:28:47,Habilitada,Quito,Peaje Rumiñahui
+43,XEK-4091,2023-09-23 23:36:49,Habilitada,Manta,Peaje Manta-Rocafuerte
+44,IMC-5566,2025-07-19 17:37:59,Habilitada,Quito,Peaje Oyacoto
+45,XWL-8035,2020-08-18 08:58:27,Habilitada,Quito,Peaje Oyacoto
+46,XPX-3566,2024-09-29 13:12:32,Habilitada,Quito,Peaje Rumiñahui
+47,CMU-5654,2021-01-24 15:55:57,Habilitada,Quito,Peaje Rumiñahui
+48,BGA-2913,2021-05-15 22:15:34,Habilitada,Guayaquil,Peaje Chivería
+49,UDR-4031,2023-07-17 17:23:18,Habilitada,Guayaquil,Peaje Chivería
+50,UUP-5224,2025-12-17 01:07:54,Habilitada,Manta,Peaje Manta-Rocafuerte
+51,TSY-7044,2025-09-19 21:57:45,Habilitada,Guayaquil,Peaje Yaguachi
+52,HRZ-6297,2024-03-18 18:09:53,Bloqueada,Manta,Peaje Manta-Rocafuerte
+53,GSA-4757,2024-08-23 21:45:08,Habilitada,Quito,Peaje Oyacoto
+54,GFL-7028,2022-12-12 21:07:24,Habilitada,Quito,Peaje Rumiñahui
+55,CVX-0928,2020-12-25 21:28:20,Habilitada,Quito,Peaje Rumiñahui
+56,LTM-9925,2024-03-23 01:58:48,Habilitada,Guayaquil,Peaje Yaguachi
+57,XCJ-7299,2020-11-09 02:35:52,Habilitada,Quito,Peaje Oyacoto
+58,HCR-0474,2024-09-18 09:37:55,Bloqueada,Manta,Peaje Manta-Rocafuerte
+59,JJZ-4229,2023-12-24 02:09:39,Habilitada,Ambato,Peaje San Andrés
+60,IRD-0053,2022-10-02 08:46:05,Suspendida,Quito,Peaje Rumiñahui
+61,HTH-3385,2023-06-21 18:14:31,Habilitada,Quito,Peaje Oyacoto
+62,LXL-1966,2025-07-10 16:28:55,Suspendida,Riobamba,Peaje San Juan
+63,IYR-9699,2020-03-13 02:43:14,Habilitada,Quito,Peaje Oyacoto
+64,MGP-2624,2022-10-26 18:11:53,Habilitada,Santo Domingo,Peaje Santo Domingo
+65,CQS-5244,2025-05-19 09:45:38,Suspendida,Manta,Peaje Manta-Rocafuerte
+66,EPA-1386,2025-02-26 04:05:58,Habilitada,Santo Domingo,Peaje Santo Domingo
+67,UVQ-3903,2020-02-18 13:15:41,Habilitada,Quito,Peaje Rumiñahui
+68,HLR-5369,2022-06-30 11:33:45,Habilitada,Machala,Peaje El Garrido
+69,IEI-2251,2025-07-27 23:20:34,Suspendida,Cuenca,Peaje Chaquilcay
+70,IRL-7225,2022-02-02 02:27:06,Habilitada,Manta,Peaje Manta-Rocafuerte
+71,EBS-8313,2020-02-22 04:48:41,Habilitada,Cuenca,Peaje Chaquilcay
+72,GGF-1354,2025-08-13 02:11:58,Habilitada,Quito,Peaje Rumiñahui
+73,LPO-6741,2021-06-23 16:32:36,Habilitada,Riobamba,Peaje San Juan
+74,LTJ-4001,2024-10-23 16:11:50,Habilitada,Manta,Peaje Manta-Rocafuerte
+75,LAK-0991,2022-01-27 05:13:55,Suspendida,Quito,Peaje Rumiñahui
+76,UXR-3438,2020-01-01 04:52:52,Habilitada,Machala,Peaje El Garrido
+77,GCC-2997,2024-11-08 10:22:51,Habilitada,Guayaquil,Peaje Chivería
+78,BFV-9610,2025-06-11 10:55:32,Habilitada,Riobamba,Peaje San Juan
+79,LEP-6411,2025-10-31 08:52:27,Habilitada,Guayaquil,Peaje Chivería
+80,GOW-4029,2024-02-10 13:00:41,Habilitada,Riobamba,Peaje San Juan
+81,UDO-1321,2024-09-15 12:06:25,Habilitada,Santo Domingo,Peaje Santo Domingo
+82,EAA-0396,2023-05-31 09:26:43,Suspendida,Manta,Peaje Manta-Rocafuerte
+83,MBW-7437,2022-02-28 02:01:08,Habilitada,Quito,Peaje Rumiñahui
+84,BJB-8169,2025-07-25 18:03:19,Bloqueada,Guayaquil,Peaje Yaguachi
+85,LAK-0991,2021-05-25 03:45:31,Habilitada,Machala,Peaje El Garrido
+86,BZA-7928,2021-12-12 09:02:59,Habilitada,Ambato,Peaje San Andrés
+87,HRZ-6297,2022-03-11 10:29:48,Habilitada,Manta,Peaje Manta-Rocafuerte
+88,MBO-3342,2022-09-04 14:13:40,Habilitada,Guayaquil,Peaje Yaguachi
+89,UUP-5224,2022-04-05 16:16:09,Habilitada,Quito,Peaje Rumiñahui
+90,PKQ-5185,2025-08-31 19:58:55,Habilitada,Santo Domingo,Peaje Santo Domingo
+91,UZL-9237,2022-03-15 07:28:09,Suspendida,Guayaquil,Peaje Chivería
+92,MWX-2154,2020-05-11 00:10:49,Habilitada,Guayaquil,Peaje Yaguachi
+93,MZM-9440,2025-03-01 22:22:07,Habilitada,Machala,Peaje El Garrido
+94,LKF-2747,2025-01-06 00:58:49,Habilitada,Guayaquil,Peaje Chivería
+95,BCS-9994,2020-04-22 11:34:48,Habilitada,Machala,Peaje El Garrido
+96,MXM-5136,2022-05-28 07:21:00,Habilitada,Ambato,Peaje San Andrés
+97,GGF-1354,2023-10-10 07:54:23,Habilitada,Quito,Peaje Rumiñahui
+98,GIW-6891,2022-01-08 13:42:17,Habilitada,Cuenca,Peaje Chaquilcay
+99,MXH-7310,2023-11-29 21:29:43,Habilitada,Guayaquil,Peaje Yaguachi
+100,TRE-6602,2021-10-31 15:16:45,Habilitada,Cuenca,Peaje Chaquilcay
+101,HJS-0664,2021-03-11 00:39:17,Habilitada,Riobamba,Peaje San Juan
+102,PXL-3274,2024-05-01 20:00:06,Habilitada,Manta,Peaje Manta-Rocafuerte
+103,HOM-8258,2021-02-10 08:21:31,Habilitada,Quito,Peaje Oyacoto
+104,UAX-3828,2020-07-31 04:17:07,Habilitada,Guayaquil,Peaje Chivería
+105,LBL-1440,2024-03-25 05:58:38,Habilitada,Quito,Peaje Rumiñahui
+106,LJW-4027,2021-03-27 00:59:02,Habilitada,Guayaquil,Peaje Chivería
+107,PIE-2627,2025-12-22 11:40:48,Suspendida,Santo Domingo,Peaje Santo Domingo
+108,CPT-0364,2023-11-21 22:43:37,Habilitada,Ambato,Peaje San Andrés
+109,TIX-1532,2025-03-12 14:44:38,Suspendida,Cuenca,Peaje Chaquilcay
+110,BQG-4367,2025-12-11 08:38:59,Habilitada,Guayaquil,Peaje Yaguachi
+111,CWQ-6582,2025-09-22 19:00:32,Habilitada,Santo Domingo,Peaje Santo Domingo
+112,JCV-0576,2023-05-17 11:25:02,Habilitada,Riobamba,Peaje San Juan
+113,CTB-0982,2025-09-24 16:35:08,Habilitada,Guayaquil,Peaje Yaguachi
+114,ITM-3531,2025-11-15 09:20:30,Habilitada,Guayaquil,Peaje Yaguachi
+115,TER-4305,2021-06-28 15:08:42,Habilitada,Guayaquil,Peaje Chivería
+116,JPW-1122,2020-07-12 05:29:55,Habilitada,Quito,Peaje Oyacoto
+117,CKH-6030,2023-11-13 23:00:13,Habilitada,Quito,Peaje Oyacoto
+118,EVT-9078,2024-11-24 18:57:30,Habilitada,Quito,Peaje Rumiñahui
+119,LSY-3662,2023-11-02 15:17:50,Habilitada,Quito,Peaje Rumiñahui
+120,LOW-2319,2021-12-18 05:39:50,Habilitada,Ambato,Peaje San Andrés
+121,URJ-7488,2020-06-15 13:41:30,Suspendida,Cuenca,Peaje Chaquilcay
+122,JIY-4129,2020-06-08 03:27:12,Habilitada,Cuenca,Peaje Chaquilcay
+123,HOD-5849,2020-10-21 07:42:44,Bloqueada,Guayaquil,Peaje Yaguachi
+124,BGN-8560,2023-05-22 01:28:41,Habilitada,Guayaquil,Peaje Chivería
+125,GYX-8165,2020-02-19 21:10:43,Habilitada,Quito,Peaje Rumiñahui
+126,HIB-0307,2021-11-27 23:43:45,Habilitada,Manta,Peaje Manta-Rocafuerte
+127,TUM-7031,2024-06-17 07:43:22,Suspendida,Ambato,Peaje San Andrés
+128,XGN-5997,2025-06-01 13:27:28,Habilitada,Cuenca,Peaje Chaquilcay
+129,IEI-4854,2020-11-16 05:23:44,Habilitada,Guayaquil,Peaje Chivería
+130,XSE-1179,2024-03-10 17:39:09,Habilitada,Guayaquil,Peaje Chivería
+131,ICV-9749,2022-04-19 00:53:15,Habilitada,Cuenca,Peaje Chaquilcay
+132,XMO-4070,2025-10-10 18:19:06,Habilitada,Riobamba,Peaje San Juan
+133,BUO-4587,2020-03-01 00:09:50,Habilitada,Manta,Peaje Manta-Rocafuerte
+134,ACE-1986,2025-08-22 13:03:38,Habilitada,Guayaquil,Peaje Yaguachi
+135,ARD-1579,2024-06-13 21:05:51,Habilitada,Santo Domingo,Peaje Santo Domingo
+136,UVQ-3903,2020-05-02 18:47:52,Habilitada,Machala,Peaje El Garrido
+137,AII-4518,2020-09-26 20:56:18,Bloqueada,Riobamba,Peaje San Juan
+138,AII-4518,2022-06-28 13:08:37,Habilitada,Quito,Peaje Oyacoto
+139,BJD-9055,2022-08-04 02:28:21,Habilitada,Ambato,Peaje San Andrés
+140,GPO-6766,2024-05-24 03:12:01,Habilitada,Machala,Peaje El Garrido
+141,XWL-8035,2025-08-05 16:38:54,Habilitada,Guayaquil,Peaje Yaguachi
+142,MBT-2156,2022-02-10 07:14:53,Habilitada,Manta,Peaje Manta-Rocafuerte
+143,XTN-7706,2025-08-07 10:00:42,Habilitada,Santo Domingo,Peaje Santo Domingo
+144,MSI-3855,2021-12-23 20:54:44,Habilitada,Machala,Peaje El Garrido
+145,JGP-3848,2024-01-07 17:45:44,Habilitada,Santo Domingo,Peaje Santo Domingo
+146,IIM-0341,2024-11-24 16:13:56,Habilitada,Santo Domingo,Peaje Santo Domingo
+147,HZU-9325,2020-12-11 04:14:21,Habilitada,Guayaquil,Peaje Chivería
+148,BXQ-6157,2024-12-29 02:12:26,Habilitada,Guayaquil,Peaje Yaguachi
+149,AMG-9583,2024-09-30 12:58:24,Habilitada,Machala,Peaje El Garrido
+150,AOC-2262,2020-07-01 04:52:51,Habilitada,Quito,Peaje Rumiñahui
+151,HJO-4030,2022-05-12 02:19:27,Habilitada,Quito,Peaje Rumiñahui
+152,IKN-6851,2022-10-10 00:31:42,Habilitada,Guayaquil,Peaje Chivería
+153,HEH-1997,2024-10-01 05:44:39,Suspendida,Manta,Peaje Manta-Rocafuerte
+154,ALQ-7215,2022-09-19 22:10:15,Habilitada,Quito,Peaje Oyacoto
+155,EDN-7024,2025-06-13 21:24:42,Habilitada,Manta,Peaje Manta-Rocafuerte
+156,GFR-4339,2023-06-02 22:43:43,Habilitada,Santo Domingo,Peaje Santo Domingo
+157,JIT-5508,2025-08-24 08:01:53,Habilitada,Cuenca,Peaje Chaquilcay
+158,JZY-6279,2023-12-10 18:59:37,Suspendida,Machala,Peaje El Garrido
+159,THG-5168,2022-06-06 01:59:43,Habilitada,Ambato,Peaje San Andrés
+160,HKX-7881,2021-06-07 18:22:32,Habilitada,Ambato,Peaje San Andrés
+161,ITN-2885,2025-02-09 14:51:29,Habilitada,Riobamba,Peaje San Juan
+162,LGC-5996,2024-07-11 16:44:06,Habilitada,Quito,Peaje Rumiñahui
+163,CPP-5669,2025-10-03 15:14:05,Suspendida,Quito,Peaje Rumiñahui
+164,ASJ-9636,2024-01-27 02:18:43,Habilitada,Santo Domingo,Peaje Santo Domingo
+165,CDB-1895,2024-11-19 12:18:49,Bloqueada,Guayaquil,Peaje Chivería
+166,UEU-9311,2025-01-17 04:46:21,Habilitada,Guayaquil,Peaje Chivería
+167,HJO-4030,2025-05-17 12:18:40,Habilitada,Cuenca,Peaje Chaquilcay
+168,CLA-9387,2024-07-07 06:24:47,Habilitada,Manta,Peaje Manta-Rocafuerte
+169,JXR-7402,2021-02-11 17:46:10,Habilitada,Machala,Peaje El Garrido
+170,JDW-3524,2021-05-31 21:23:36,Habilitada,Guayaquil,Peaje Chivería
+171,IPE-0900,2020-12-17 22:32:41,Habilitada,Quito,Peaje Oyacoto
+172,LSZ-2729,2021-06-19 07:48:02,Bloqueada,Machala,Peaje El Garrido
+173,XPP-6825,2023-10-22 13:32:55,Habilitada,Guayaquil,Peaje Chivería
+174,ACM-4169,2022-03-15 23:17:06,Habilitada,Santo Domingo,Peaje Santo Domingo
+175,PTV-5957,2023-12-15 11:24:24,Habilitada,Quito,Peaje Rumiñahui
+176,PGV-5855,2025-03-26 15:53:33,Habilitada,Machala,Peaje El Garrido
+177,JDW-3524,2025-10-29 05:49:22,Habilitada,Machala,Peaje El Garrido
+178,MQB-1028,2021-04-16 07:40:14,Habilitada,Santo Domingo,Peaje Santo Domingo
+179,BHJ-0598,2020-10-31 06:04:49,Habilitada,Quito,Peaje Rumiñahui
+180,UHR-6773,2022-03-27 06:11:36,Habilitada,Cuenca,Peaje Chaquilcay
+181,MVG-7522,2020-07-18 00:12:59,Habilitada,Riobamba,Peaje San Juan
+182,MZL-4547,2022-08-29 05:00:53,Habilitada,Quito,Peaje Rumiñahui
+183,PXL-3274,2021-10-28 10:18:56,Habilitada,Quito,Peaje Oyacoto
+184,MXQ-9893,2025-11-29 17:53:32,Habilitada,Quito,Peaje Oyacoto
+185,MOJ-6225,2022-07-09 18:28:22,Habilitada,Quito,Peaje Oyacoto
+186,HQD-1460,2025-04-25 10:40:35,Habilitada,Quito,Peaje Rumiñahui
+187,BPS-9554,2021-02-02 15:26:32,Habilitada,Guayaquil,Peaje Yaguachi
+188,MUA-6300,2023-05-08 23:48:22,Habilitada,Guayaquil,Peaje Yaguachi
+189,JGP-3848,2022-07-04 12:28:53,Habilitada,Santo Domingo,Peaje Santo Domingo
+190,UVX-0937,2021-06-13 07:58:47,Habilitada,Riobamba,Peaje San Juan
+191,BBD-0886,2022-05-01 15:44:58,Habilitada,Cuenca,Peaje Chaquilcay
+192,XGL-4438,2024-02-10 18:12:58,Habilitada,Santo Domingo,Peaje Santo Domingo
+193,CRJ-1431,2023-02-27 07:54:55,Habilitada,Ambato,Peaje San Andrés
+194,BGN-8560,2023-04-04 08:04:30,Habilitada,Guayaquil,Peaje Yaguachi
+195,GIW-6891,2023-11-20 19:09:04,Habilitada,Quito,Peaje Oyacoto
+196,JKN-1905,2020-06-17 15:06:09,Habilitada,Riobamba,Peaje San Juan
+197,XZJ-4435,2022-01-16 00:46:34,Habilitada,Guayaquil,Peaje Chivería
+198,PCN-6354,2022-08-05 11:47:55,Habilitada,Guayaquil,Peaje Yaguachi
+199,LYH-3376,2023-05-22 19:34:50,Habilitada,Quito,Peaje Rumiñahui
+200,XEK-4091,2023-12-05 07:54:06,Habilitada,Riobamba,Peaje San Juan
+201,XTN-7706,2022-10-31 07:10:44,Habilitada,Quito,Peaje Rumiñahui
+202,CWQ-6582,2022-04-12 12:30:42,Suspendida,Guayaquil,Peaje Yaguachi
+203,CQS-5244,2021-02-02 01:19:35,Habilitada,Cuenca,Peaje Chaquilcay
+204,HRZ-6297,2023-10-12 20:06:58,Habilitada,Guayaquil,Peaje Chivería
+205,JKN-1905,2024-09-10 23:52:47,Habilitada,Santo Domingo,Peaje Santo Domingo
+206,LUI-5437,2020-05-08 23:44:52,Habilitada,Santo Domingo,Peaje Santo Domingo
+207,BPS-5091,2023-03-14 14:06:15,Habilitada,Machala,Peaje El Garrido
+208,MJS-1057,2025-08-31 20:24:06,Habilitada,Riobamba,Peaje San Juan
+209,PGK-5717,2024-04-01 19:21:50,Habilitada,Ambato,Peaje San Andrés
+210,GTT-0854,2020-11-24 03:35:48,Habilitada,Guayaquil,Peaje Yaguachi
+211,TCI-9581,2021-12-30 13:30:10,Habilitada,Quito,Peaje Rumiñahui
+212,ITM-3531,2021-08-24 00:46:11,Habilitada,Manta,Peaje Manta-Rocafuerte
+213,GFL-7028,2023-09-22 03:30:56,Habilitada,Quito,Peaje Rumiñahui
+214,LAV-4180,2024-06-18 12:36:30,Habilitada,Guayaquil,Peaje Chivería
+215,IIV-4441,2025-01-28 08:31:30,Habilitada,Cuenca,Peaje Chaquilcay
+216,UUT-8258,2021-07-31 19:39:49,Habilitada,Quito,Peaje Oyacoto
+217,HNU-6380,2022-02-22 07:29:53,Habilitada,Guayaquil,Peaje Chivería
+218,PJS-9373,2024-08-12 04:13:00,Habilitada,Ambato,Peaje San Andrés
+219,IEI-4854,2020-12-10 04:40:51,Habilitada,Guayaquil,Peaje Chivería
+220,TEJ-2778,2025-10-11 22:07:27,Habilitada,Guayaquil,Peaje Chivería
+221,JCX-3726,2024-08-04 05:50:52,Habilitada,Riobamba,Peaje San Juan
+222,CJB-6035,2023-08-04 02:45:50,Bloqueada,Quito,Peaje Oyacoto
+223,MGJ-1801,2024-08-25 18:24:31,Habilitada,Riobamba,Peaje San Juan
+224,GSM-1440,2023-02-05 22:15:44,Habilitada,Quito,Peaje Rumiñahui
+225,XLR-6238,2020-11-09 19:33:19,Habilitada,Quito,Peaje Rumiñahui
+226,UJG-9106,2022-08-23 13:27:31,Habilitada,Santo Domingo,Peaje Santo Domingo
+227,LQS-3994,2021-02-22 15:03:50,Habilitada,Quito,Peaje Oyacoto
+228,BUO-4587,2020-01-30 19:51:32,Habilitada,Quito,Peaje Oyacoto
+229,EFG-0998,2020-10-20 06:36:27,Habilitada,Manta,Peaje Manta-Rocafuerte
+230,LRU-3756,2020-06-11 23:21:54,Habilitada,Quito,Peaje Rumiñahui
+231,LUH-7655,2023-01-13 03:36:14,Habilitada,Quito,Peaje Oyacoto
+232,XLR-6238,2022-02-28 20:04:33,Habilitada,Ambato,Peaje San Andrés
+233,GPF-4635,2024-10-24 08:54:05,Habilitada,Quito,Peaje Oyacoto
+234,URZ-7357,2023-05-07 07:18:12,Habilitada,Machala,Peaje El Garrido
+235,CEU-0169,2022-10-14 23:04:20,Habilitada,Manta,Peaje Manta-Rocafuerte
+236,HOW-7126,2022-03-03 04:01:25,Suspendida,Machala,Peaje El Garrido
+237,XWL-8035,2021-01-10 01:43:58,Habilitada,Guayaquil,Peaje Yaguachi
+238,CZK-7848,2020-06-20 13:09:51,Habilitada,Cuenca,Peaje Chaquilcay
+239,BSL-9844,2020-12-26 14:10:21,Habilitada,Cuenca,Peaje Chaquilcay
+240,MSI-4747,2023-09-15 21:54:38,Habilitada,Quito,Peaje Oyacoto
+241,HWD-6956,2023-04-04 04:49:14,Habilitada,Guayaquil,Peaje Chivería
+242,JIT-5508,2024-09-18 12:18:10,Habilitada,Cuenca,Peaje Chaquilcay
+243,TXC-8792,2025-05-25 16:00:36,Habilitada,Quito,Peaje Rumiñahui
+244,EBS-9251,2025-10-21 12:25:53,Habilitada,Riobamba,Peaje San Juan
+245,CZK-7848,2023-10-04 04:51:27,Habilitada,Ambato,Peaje San Andrés
+246,XGN-5997,2021-08-21 07:50:24,Bloqueada,Santo Domingo,Peaje Santo Domingo
+247,HQH-1460,2020-08-14 20:22:23,Suspendida,Cuenca,Peaje Chaquilcay
+248,ILO-3708,2022-09-06 00:37:13,Habilitada,Quito,Peaje Oyacoto
+249,HEH-1997,2021-05-21 17:09:30,Habilitada,Guayaquil,Peaje Chivería
+250,UYT-8346,2024-04-07 11:28:15,Habilitada,Quito,Peaje Rumiñahui
+251,TEJ-2778,2024-07-16 18:19:35,Habilitada,Quito,Peaje Oyacoto
+252,GFR-4339,2020-03-06 07:36:59,Habilitada,Ambato,Peaje San Andrés
+253,MGJ-1801,2025-05-10 15:47:27,Habilitada,Quito,Peaje Rumiñahui
+254,LPO-6741,2025-08-25 02:04:09,Habilitada,Manta,Peaje Manta-Rocafuerte
+255,PGP-5763,2024-05-05 12:25:32,Habilitada,Guayaquil,Peaje Chivería
+256,BXQ-6157,2022-03-05 18:06:11,Bloqueada,Manta,Peaje Manta-Rocafuerte
+257,URJ-7488,2020-07-05 07:12:38,Habilitada,Machala,Peaje El Garrido
+258,UPD-6367,2020-05-06 07:40:46,Habilitada,Machala,Peaje El Garrido
+259,UVX-0937,2024-01-16 12:12:00,Habilitada,Riobamba,Peaje San Juan
+260,HQD-1460,2023-03-11 01:51:38,Habilitada,Riobamba,Peaje San Juan
+261,GGP-6902,2021-02-13 21:34:58,Habilitada,Riobamba,Peaje San Juan
+262,GLE-3023,2025-11-09 11:07:11,Habilitada,Quito,Peaje Oyacoto
+263,BAO-2656,2025-03-26 15:42:10,Habilitada,Guayaquil,Peaje Yaguachi
+264,CEU-0169,2024-05-20 14:49:13,Bloqueada,Machala,Peaje El Garrido
+265,TQW-1691,2021-10-04 20:38:29,Habilitada,Guayaquil,Peaje Yaguachi
+266,PBK-4610,2020-12-19 10:59:05,Habilitada,Machala,Peaje El Garrido
+267,PXL-3274,2020-03-19 21:40:44,Bloqueada,Guayaquil,Peaje Yaguachi
+268,ARB-9836,2025-04-27 02:12:05,Habilitada,Riobamba,Peaje San Juan
+269,LFZ-6179,2021-01-13 06:42:44,Habilitada,Guayaquil,Peaje Yaguachi
+270,LKF-2747,2020-08-15 22:42:50,Habilitada,Ambato,Peaje San Andrés
+271,ABH-7849,2020-03-13 18:19:06,Habilitada,Manta,Peaje Manta-Rocafuerte
+272,JRU-6440,2022-06-19 03:53:29,Suspendida,Manta,Peaje Manta-Rocafuerte
+273,LZG-6413,2021-12-03 09:25:37,Habilitada,Quito,Peaje Rumiñahui
+274,PYQ-9462,2023-07-02 18:37:21,Habilitada,Guayaquil,Peaje Chivería
+275,ATK-4605,2023-12-18 10:56:23,Habilitada,Cuenca,Peaje Chaquilcay
+276,HNK-3976,2023-09-28 20:00:40,Habilitada,Guayaquil,Peaje Chivería
+277,ANC-1867,2022-02-28 23:21:09,Habilitada,Machala,Peaje El Garrido
+278,CLN-3685,2023-08-05 18:52:16,Habilitada,Santo Domingo,Peaje Santo Domingo
+279,HTH-3385,2021-03-28 08:51:30,Habilitada,Manta,Peaje Manta-Rocafuerte
+280,GCC-2997,2021-07-02 14:36:51,Habilitada,Riobamba,Peaje San Juan
+281,EBS-9251,2025-05-16 07:31:52,Habilitada,Cuenca,Peaje Chaquilcay
+282,MZM-9440,2020-02-09 10:55:01,Habilitada,Manta,Peaje Manta-Rocafuerte
+283,BSK-6222,2023-11-28 16:09:07,Habilitada,Santo Domingo,Peaje Santo Domingo
+284,LCZ-6422,2022-05-13 06:59:57,Habilitada,Ambato,Peaje San Andrés
+285,IRD-0053,2024-01-17 08:56:50,Suspendida,Guayaquil,Peaje Chivería
+286,AMP-3990,2022-01-12 19:53:18,Habilitada,Guayaquil,Peaje Chivería
+287,JZS-2223,2020-08-25 10:23:22,Habilitada,Quito,Peaje Oyacoto
+288,HCR-0474,2021-06-06 18:28:07,Habilitada,Manta,Peaje Manta-Rocafuerte
+289,TYW-5068,2025-11-03 01:46:41,Suspendida,Guayaquil,Peaje Chivería
+290,UDC-8098,2024-08-07 01:06:57,Habilitada,Cuenca,Peaje Chaquilcay
+291,CEB-0747,2021-12-19 19:06:26,Habilitada,Cuenca,Peaje Chaquilcay
+292,ITM-3531,2020-12-31 01:08:38,Habilitada,Quito,Peaje Oyacoto
+293,ABM-2548,2021-08-30 22:39:52,Habilitada,Quito,Peaje Rumiñahui
+294,LPO-6741,2024-09-22 19:47:52,Habilitada,Guayaquil,Peaje Yaguachi
+295,JWD-6186,2025-07-11 12:37:41,Habilitada,Santo Domingo,Peaje Santo Domingo
+296,MQB-1028,2021-09-19 07:27:10,Habilitada,Ambato,Peaje San Andrés
+297,JDM-2286,2023-02-22 09:44:53,Habilitada,Manta,Peaje Manta-Rocafuerte
+298,BFV-9610,2022-03-28 04:05:15,Habilitada,Guayaquil,Peaje Chivería
+299,HWF-7552,2023-04-24 20:06:28,Habilitada,Ambato,Peaje San Andrés
+300,AOC-2262,2024-10-23 11:28:02,Habilitada,Guayaquil,Peaje Chivería
+301,PHT-2633,2024-10-16 06:55:31,Habilitada,Guayaquil,Peaje Yaguachi
+302,UXV-9196,2022-05-30 04:11:59,Habilitada,Ambato,Peaje San Andrés
+303,JXD-4805,2025-10-17 19:38:44,Habilitada,Machala,Peaje El Garrido
+304,ERN-3387,2021-08-27 00:27:05,Habilitada,Cuenca,Peaje Chaquilcay
+305,UJG-9106,2022-12-18 00:15:22,Habilitada,Santo Domingo,Peaje Santo Domingo
+306,LHQ-6991,2021-04-03 13:37:36,Habilitada,Quito,Peaje Oyacoto
+307,EAA-0396,2021-01-23 05:03:24,Habilitada,Riobamba,Peaje San Juan
+308,GIK-6033,2020-07-24 03:20:00,Habilitada,Cuenca,Peaje Chaquilcay
+309,TRE-6602,2023-09-30 22:28:35,Habilitada,Guayaquil,Peaje Yaguachi
+310,AWL-3915,2022-10-13 04:55:59,Habilitada,Quito,Peaje Rumiñahui
+311,HGK-8927,2023-06-13 15:56:53,Habilitada,Quito,Peaje Rumiñahui
+312,CVX-0928,2024-10-24 06:19:50,Habilitada,Riobamba,Peaje San Juan
+313,MNK-9372,2025-07-08 09:52:14,Habilitada,Riobamba,Peaje San Juan
+314,MGP-2624,2021-10-19 22:44:37,Habilitada,Quito,Peaje Rumiñahui
+315,UJF-3191,2021-03-14 22:04:43,Habilitada,Manta,Peaje Manta-Rocafuerte
+316,BSL-9844,2022-06-01 13:04:09,Habilitada,Quito,Peaje Rumiñahui
+317,GIW-6891,2020-08-27 06:53:32,Habilitada,Quito,Peaje Oyacoto
+318,JTI-4972,2023-09-30 04:22:35,Habilitada,Machala,Peaje El Garrido
+319,GVF-5248,2025-01-08 04:49:11,Habilitada,Cuenca,Peaje Chaquilcay
+320,JDW-3524,2025-08-26 03:16:24,Habilitada,Riobamba,Peaje San Juan
+321,UCS-0599,2021-11-07 13:59:04,Habilitada,Guayaquil,Peaje Chivería
+322,GWD-1469,2024-07-01 06:58:35,Habilitada,Cuenca,Peaje Chaquilcay
+323,MVX-1047,2025-07-19 06:48:28,Habilitada,Manta,Peaje Manta-Rocafuerte
+324,IIC-5620,2020-01-25 21:38:42,Habilitada,Ambato,Peaje San Andrés
+325,XVF-1324,2023-11-30 20:05:47,Habilitada,Guayaquil,Peaje Chivería
+326,BZV-2223,2022-12-10 05:43:02,Habilitada,Ambato,Peaje San Andrés
+327,AWL-3915,2025-11-11 02:28:58,Habilitada,Quito,Peaje Rumiñahui
+328,BPS-9554,2024-06-14 12:14:00,Suspendida,Ambato,Peaje San Andrés
+329,AAL-5699,2020-10-21 11:46:47,Habilitada,Machala,Peaje El Garrido
+330,JCV-0576,2022-03-09 15:57:10,Habilitada,Quito,Peaje Rumiñahui
+331,BSK-6222,2023-04-24 00:09:36,Habilitada,Cuenca,Peaje Chaquilcay
+332,BLY-3554,2023-05-11 08:18:54,Suspendida,Ambato,Peaje San Andrés
+333,BLY-3554,2020-01-11 20:43:16,Habilitada,Quito,Peaje Rumiñahui
+334,XGL-4438,2022-12-18 22:22:32,Habilitada,Guayaquil,Peaje Yaguachi
+335,CNW-9224,2021-12-22 02:05:59,Habilitada,Guayaquil,Peaje Chivería
+336,PBK-4610,2020-02-07 12:23:00,Habilitada,Riobamba,Peaje San Juan
+337,EPV-3833,2021-01-21 11:55:28,Suspendida,Quito,Peaje Oyacoto
+338,HGW-2649,2021-05-08 16:52:10,Habilitada,Ambato,Peaje San Andrés
+339,EZC-5607,2021-09-03 21:09:35,Habilitada,Guayaquil,Peaje Yaguachi
+340,EBS-9251,2024-01-23 00:09:26,Habilitada,Ambato,Peaje San Andrés
+341,MGI-5212,2023-01-20 22:16:38,Habilitada,Manta,Peaje Manta-Rocafuerte
+342,UWW-5645,2023-04-09 08:47:13,Habilitada,Ambato,Peaje San Andrés
+343,GSA-4757,2021-09-22 15:16:48,Habilitada,Quito,Peaje Oyacoto
+344,HEH-2500,2020-12-19 00:34:54,Habilitada,Quito,Peaje Oyacoto
+345,LTF-5364,2020-12-15 08:38:20,Habilitada,Manta,Peaje Manta-Rocafuerte
+346,TMS-7538,2020-07-03 13:32:08,Suspendida,Cuenca,Peaje Chaquilcay
+347,LUQ-6620,2025-10-18 18:38:53,Habilitada,Guayaquil,Peaje Yaguachi
+348,TMS-7538,2021-10-15 11:42:54,Habilitada,Guayaquil,Peaje Yaguachi
+349,JIT-5508,2021-08-02 08:56:10,Habilitada,Cuenca,Peaje Chaquilcay
+350,XUS-8550,2025-10-14 20:57:57,Habilitada,Santo Domingo,Peaje Santo Domingo
+351,XBW-9373,2020-06-23 07:39:40,Habilitada,Quito,Peaje Rumiñahui
+352,CVY-9594,2020-08-28 02:25:03,Habilitada,Machala,Peaje El Garrido
+353,TCI-9581,2021-03-12 06:17:13,Habilitada,Quito,Peaje Oyacoto
+354,GCU-5591,2022-05-03 10:41:50,Habilitada,Riobamba,Peaje San Juan
+355,IEI-2251,2021-08-03 18:14:03,Habilitada,Machala,Peaje El Garrido
+356,JZY-6279,2024-11-11 01:52:37,Habilitada,Ambato,Peaje San Andrés
+357,EMB-4276,2024-01-12 15:06:43,Bloqueada,Manta,Peaje Manta-Rocafuerte
+358,TEJ-2778,2020-04-09 05:11:33,Suspendida,Cuenca,Peaje Chaquilcay
+359,BFV-9610,2023-09-01 01:06:20,Habilitada,Cuenca,Peaje Chaquilcay
+360,LNA-8016,2024-01-21 03:55:24,Habilitada,Cuenca,Peaje Chaquilcay
+361,ASJ-9636,2024-02-14 06:19:36,Habilitada,Quito,Peaje Rumiñahui
+362,ACE-1986,2022-05-14 19:47:45,Suspendida,Guayaquil,Peaje Yaguachi
+363,GRJ-1391,2021-06-03 23:04:11,Habilitada,Quito,Peaje Rumiñahui
+364,HJS-4910,2021-09-20 00:39:55,Habilitada,Riobamba,Peaje San Juan
+365,UVQ-3903,2021-10-10 21:46:56,Habilitada,Quito,Peaje Rumiñahui
+366,HWD-6956,2020-09-26 10:02:28,Habilitada,Guayaquil,Peaje Yaguachi
+367,GMX-6322,2022-10-13 15:49:22,Habilitada,Santo Domingo,Peaje Santo Domingo
+368,XZX-7367,2025-11-24 00:52:28,Habilitada,Ambato,Peaje San Andrés
+369,PHT-2633,2021-05-24 18:35:31,Habilitada,Riobamba,Peaje San Juan
+370,ITN-2885,2023-04-15 00:28:06,Habilitada,Guayaquil,Peaje Chivería
+371,UZL-9237,2024-12-17 01:38:48,Habilitada,Quito,Peaje Oyacoto
+372,LKF-2747,2024-04-01 06:34:14,Suspendida,Machala,Peaje El Garrido
+373,BQG-4367,2024-06-28 17:23:18,Habilitada,Guayaquil,Peaje Chivería
+374,TRE-6602,2024-08-24 19:36:18,Habilitada,Ambato,Peaje San Andrés
+375,JPW-1122,2022-10-14 16:38:43,Habilitada,Guayaquil,Peaje Chivería
+376,IBO-2053,2022-08-07 11:29:05,Habilitada,Quito,Peaje Rumiñahui
+377,GMK-7879,2022-03-12 03:12:03,Bloqueada,Guayaquil,Peaje Chivería
+378,XJX-9778,2023-11-05 05:07:04,Habilitada,Ambato,Peaje San Andrés
+379,LTM-5341,2023-07-02 15:56:52,Habilitada,Guayaquil,Peaje Chivería
+380,UVQ-3903,2022-03-28 00:03:05,Habilitada,Quito,Peaje Rumiñahui
+381,AIS-9452,2025-06-09 23:45:21,Habilitada,Riobamba,Peaje San Juan
+382,EXD-2370,2024-04-28 05:33:27,Habilitada,Ambato,Peaje San Andrés
+383,UUC-8080,2025-07-15 15:29:02,Habilitada,Machala,Peaje El Garrido
+384,LSZ-2729,2022-01-13 13:52:04,Habilitada,Machala,Peaje El Garrido
+385,BLY-3554,2020-06-10 06:07:08,Habilitada,Machala,Peaje El Garrido
+386,MEF-8032,2024-03-16 02:38:39,Habilitada,Quito,Peaje Rumiñahui
+387,BNY-8327,2022-09-26 20:35:51,Suspendida,Manta,Peaje Manta-Rocafuerte
+388,PTV-7297,2022-10-11 11:46:58,Habilitada,Guayaquil,Peaje Chivería
+389,UUQ-9962,2024-10-06 23:00:04,Habilitada,Guayaquil,Peaje Chivería
+390,BQG-4367,2022-06-17 16:05:47,Bloqueada,Machala,Peaje El Garrido
+391,CEU-0169,2023-03-17 14:02:55,Habilitada,Machala,Peaje El Garrido
+392,CPP-5669,2023-09-08 17:21:10,Bloqueada,Guayaquil,Peaje Yaguachi
+393,GUK-1050,2021-10-10 03:01:38,Habilitada,Guayaquil,Peaje Chivería
+394,IRE-7271,2021-07-09 23:52:58,Habilitada,Quito,Peaje Oyacoto
+395,TPU-9333,2022-12-14 20:18:09,Habilitada,Machala,Peaje El Garrido
+396,HOZ-2528,2025-01-01 10:29:42,Habilitada,Ambato,Peaje San Andrés
+397,XEH-9069,2020-06-25 22:27:47,Suspendida,Riobamba,Peaje San Juan
+398,TXS-7881,2020-12-29 16:13:00,Habilitada,Quito,Peaje Oyacoto
+399,EMB-4276,2020-02-08 11:27:06,Habilitada,Riobamba,Peaje San Juan
+400,HYD-2892,2024-09-17 18:29:51,Habilitada,Cuenca,Peaje Chaquilcay
+401,CET-1423,2021-12-15 06:24:16,Habilitada,Ambato,Peaje San Andrés
+402,HFN-4462,2021-04-04 01:17:55,Habilitada,Quito,Peaje Rumiñahui
+403,XEK-4091,2021-05-07 07:31:51,Habilitada,Cuenca,Peaje Chaquilcay
+404,USJ-9669,2024-12-07 14:49:54,Suspendida,Quito,Peaje Oyacoto
+405,TFE-7912,2023-05-29 14:39:05,Bloqueada,Quito,Peaje Oyacoto
+406,JDM-2286,2022-04-30 00:57:23,Habilitada,Quito,Peaje Oyacoto
+407,XEU-7281,2025-07-29 09:11:00,Habilitada,Manta,Peaje Manta-Rocafuerte
+408,CTB-0982,2025-12-28 19:01:54,Bloqueada,Ambato,Peaje San Andrés
+409,BSK-6222,2023-12-07 11:12:05,Habilitada,Ambato,Peaje San Andrés
+410,TMG-7792,2025-08-22 06:40:41,Habilitada,Cuenca,Peaje Chaquilcay
+411,LBL-1440,2024-08-23 07:19:05,Habilitada,Riobamba,Peaje San Juan
+412,IMT-8142,2021-06-14 00:40:27,Habilitada,Guayaquil,Peaje Chivería
+413,MLE-2895,2025-04-07 03:23:27,Habilitada,Guayaquil,Peaje Chivería
+414,AMP-3990,2022-02-11 13:38:04,Habilitada,Riobamba,Peaje San Juan
+415,PGV-5855,2025-05-08 16:50:54,Habilitada,Manta,Peaje Manta-Rocafuerte
+416,TQW-1691,2024-09-08 11:49:33,Habilitada,Guayaquil,Peaje Chivería
+417,UAX-3828,2025-03-12 23:21:33,Habilitada,Cuenca,Peaje Chaquilcay
+418,PVE-4011,2020-07-25 22:13:51,Habilitada,Riobamba,Peaje San Juan
+419,LHW-3227,2021-08-18 06:19:58,Habilitada,Cuenca,Peaje Chaquilcay
+420,EGX-2623,2023-12-05 07:00:12,Habilitada,Quito,Peaje Oyacoto
+421,TFX-4720,2025-01-16 11:56:51,Habilitada,Quito,Peaje Oyacoto
+422,LTJ-3444,2025-03-12 17:11:24,Habilitada,Riobamba,Peaje San Juan
+423,CXQ-3581,2023-03-20 07:02:58,Habilitada,Quito,Peaje Oyacoto
+424,IUT-3579,2023-03-31 16:58:33,Habilitada,Guayaquil,Peaje Chivería
+425,AIZ-2890,2025-04-08 18:29:38,Habilitada,Guayaquil,Peaje Yaguachi
+426,MOJ-6225,2025-12-10 10:41:13,Bloqueada,Manta,Peaje Manta-Rocafuerte
+427,TQC-1975,2022-07-26 10:52:39,Habilitada,Manta,Peaje Manta-Rocafuerte
+428,CMV-7926,2024-02-13 19:21:01,Habilitada,Ambato,Peaje San Andrés
+429,UWW-5645,2024-03-17 18:00:48,Habilitada,Machala,Peaje El Garrido
+430,UVY-1219,2022-03-14 22:22:51,Habilitada,Quito,Peaje Oyacoto
+431,UZL-9237,2021-04-06 05:47:55,Habilitada,Machala,Peaje El Garrido
+432,BAO-2656,2022-06-09 13:38:30,Habilitada,Santo Domingo,Peaje Santo Domingo
+433,ATK-4605,2023-02-08 04:08:09,Habilitada,Machala,Peaje El Garrido
+434,UEU-9311,2020-04-26 15:42:43,Habilitada,Manta,Peaje Manta-Rocafuerte
+435,HIB-0307,2024-07-15 12:55:13,Habilitada,Guayaquil,Peaje Chivería
+436,MLG-0210,2024-01-25 06:32:32,Suspendida,Machala,Peaje El Garrido
+437,XYH-1813,2025-01-07 09:04:52,Habilitada,Guayaquil,Peaje Yaguachi
+438,CVY-9594,2025-08-24 02:53:54,Habilitada,Guayaquil,Peaje Yaguachi
+439,EAN-0080,2021-09-24 19:50:10,Habilitada,Guayaquil,Peaje Yaguachi
+440,EJT-4693,2022-12-23 06:36:43,Habilitada,Manta,Peaje Manta-Rocafuerte
+441,EPA-1386,2023-09-04 20:20:50,Habilitada,Machala,Peaje El Garrido
+442,UXV-9196,2022-11-03 01:52:04,Habilitada,Machala,Peaje El Garrido
+443,HXB-0592,2025-01-25 13:00:39,Habilitada,Manta,Peaje Manta-Rocafuerte
+444,ELY-3485,2023-08-04 19:04:27,Habilitada,Santo Domingo,Peaje Santo Domingo
+445,LEO-2038,2021-01-11 05:28:05,Habilitada,Manta,Peaje Manta-Rocafuerte
+446,MKK-3427,2025-12-07 01:04:29,Bloqueada,Guayaquil,Peaje Yaguachi
+447,GGP-6902,2020-10-13 07:27:34,Habilitada,Cuenca,Peaje Chaquilcay
+448,LZG-6413,2024-08-14 16:41:55,Habilitada,Quito,Peaje Rumiñahui
+449,MKK-3427,2020-03-21 01:55:22,Habilitada,Quito,Peaje Oyacoto
+450,XYH-1813,2025-05-07 21:57:56,Habilitada,Manta,Peaje Manta-Rocafuerte
+451,TYA-5450,2023-12-02 18:40:05,Habilitada,Quito,Peaje Oyacoto
+452,AMH-0588,2023-07-30 01:51:32,Habilitada,Quito,Peaje Rumiñahui
+453,MBW-7437,2020-02-23 15:04:04,Habilitada,Guayaquil,Peaje Yaguachi
+454,XSA-1673,2025-12-20 18:55:29,Habilitada,Quito,Peaje Rumiñahui
+455,PJS-9373,2025-09-23 10:40:23,Habilitada,Santo Domingo,Peaje Santo Domingo
+456,GHR-8072,2020-03-22 10:26:38,Habilitada,Quito,Peaje Oyacoto
+457,CCV-6434,2020-03-26 16:41:20,Habilitada,Quito,Peaje Rumiñahui
+458,LSZ-2729,2023-06-27 22:34:46,Habilitada,Machala,Peaje El Garrido
+459,LEP-6411,2022-08-05 05:31:32,Habilitada,Santo Domingo,Peaje Santo Domingo
+460,TQW-1691,2021-12-21 07:56:29,Habilitada,Machala,Peaje El Garrido
+461,GXY-3889,2024-12-09 00:05:02,Bloqueada,Guayaquil,Peaje Chivería
+462,UAB-5369,2024-02-11 00:31:51,Suspendida,Cuenca,Peaje Chaquilcay
+463,IZJ-4509,2025-02-25 05:25:17,Habilitada,Manta,Peaje Manta-Rocafuerte
+464,JCX-3726,2022-06-21 19:54:34,Habilitada,Quito,Peaje Oyacoto
+465,IBO-2053,2020-08-01 10:19:14,Habilitada,Santo Domingo,Peaje Santo Domingo
+466,MNK-9372,2021-12-06 13:22:22,Habilitada,Quito,Peaje Oyacoto
+467,TIX-1532,2023-11-25 21:26:38,Habilitada,Riobamba,Peaje San Juan
+468,HLR-5369,2020-07-10 22:13:42,Habilitada,Cuenca,Peaje Chaquilcay
+469,JPO-0755,2023-06-17 21:27:33,Habilitada,Guayaquil,Peaje Chivería
+470,AGQ-6891,2021-01-26 18:50:37,Habilitada,Manta,Peaje Manta-Rocafuerte
+471,ESQ-6503,2022-06-04 09:40:03,Habilitada,Guayaquil,Peaje Chivería
+472,PHM-2971,2020-01-19 19:45:22,Habilitada,Guayaquil,Peaje Chivería
+473,XSA-1673,2020-02-13 10:32:46,Habilitada,Quito,Peaje Rumiñahui
+474,CQS-5244,2025-08-01 14:00:23,Habilitada,Ambato,Peaje San Andrés
+475,PTV-5957,2025-12-14 06:08:28,Habilitada,Guayaquil,Peaje Chivería
+476,GMH-8925,2022-06-14 17:48:10,Habilitada,Quito,Peaje Oyacoto
+477,HZO-6767,2024-12-04 09:10:34,Habilitada,Santo Domingo,Peaje Santo Domingo
+478,GMV-6850,2023-02-26 08:48:28,Habilitada,Guayaquil,Peaje Yaguachi
+479,IKN-6851,2022-07-15 20:24:17,Habilitada,Riobamba,Peaje San Juan
+480,TDJ-2375,2020-01-24 18:19:32,Habilitada,Manta,Peaje Manta-Rocafuerte
+481,CDD-4185,2020-05-17 05:45:32,Habilitada,Cuenca,Peaje Chaquilcay
+482,TEJ-2778,2024-01-20 20:03:54,Habilitada,Quito,Peaje Oyacoto
+483,ART-4567,2023-03-13 21:42:22,Habilitada,Machala,Peaje El Garrido
+484,MBK-4702,2025-08-26 15:27:00,Habilitada,Guayaquil,Peaje Yaguachi
+485,HZB-7140,2022-05-22 23:56:53,Habilitada,Quito,Peaje Oyacoto
+486,XWL-8035,2022-07-08 01:29:23,Habilitada,Cuenca,Peaje Chaquilcay
+487,JRF-8042,2020-08-14 23:36:43,Habilitada,Quito,Peaje Rumiñahui
+488,XZV-8162,2020-09-21 01:33:50,Habilitada,Cuenca,Peaje Chaquilcay
+489,CLS-7819,2024-07-22 16:54:40,Habilitada,Riobamba,Peaje San Juan
+490,HNK-3976,2022-12-21 04:03:45,Habilitada,Quito,Peaje Rumiñahui
+491,GMV-6850,2023-07-10 19:24:35,Bloqueada,Quito,Peaje Rumiñahui
+492,MOJ-6225,2020-01-02 01:21:36,Habilitada,Guayaquil,Peaje Yaguachi
+493,HZB-7140,2020-09-20 19:16:09,Habilitada,Cuenca,Peaje Chaquilcay
+494,LVH-3513,2021-09-08 22:08:03,Habilitada,Santo Domingo,Peaje Santo Domingo
+495,CGI-0562,2024-07-23 23:32:17,Habilitada,Quito,Peaje Rumiñahui
+496,TQW-1691,2023-11-24 07:07:28,Habilitada,Guayaquil,Peaje Yaguachi
+497,GDB-8552,2021-06-13 12:33:01,Suspendida,Santo Domingo,Peaje Santo Domingo
+498,AXN-7986,2023-03-18 11:10:12,Habilitada,Guayaquil,Peaje Chivería
+499,EXD-3019,2022-04-22 07:58:15,Habilitada,Quito,Peaje Oyacoto
+500,HJS-0664,2020-11-04 11:45:55,Habilitada,Guayaquil,Peaje Chivería
+501,GCC-2997,2025-09-18 01:47:27,Habilitada,Santo Domingo,Peaje Santo Domingo
+502,UAB-5369,2021-03-04 18:37:15,Habilitada,Machala,Peaje El Garrido
+503,EAA-0396,2025-05-07 10:31:34,Habilitada,Machala,Peaje El Garrido
+504,XZV-8162,2020-11-28 15:57:53,Suspendida,Santo Domingo,Peaje Santo Domingo
+505,BXQ-6157,2023-12-05 23:31:26,Bloqueada,Manta,Peaje Manta-Rocafuerte
+506,HJS-4910,2025-10-04 20:19:07,Habilitada,Quito,Peaje Rumiñahui
+507,PIE-2627,2024-01-01 20:04:03,Habilitada,Cuenca,Peaje Chaquilcay
+508,GSQ-3336,2022-01-12 00:22:47,Habilitada,Manta,Peaje Manta-Rocafuerte
+509,HZU-9325,2025-07-24 12:10:22,Habilitada,Ambato,Peaje San Andrés
+510,JYR-6257,2020-07-15 21:57:56,Habilitada,Quito,Peaje Rumiñahui
+511,EYM-1875,2020-11-15 13:00:32,Habilitada,Riobamba,Peaje San Juan
+512,LOW-2319,2024-04-22 03:08:27,Bloqueada,Santo Domingo,Peaje Santo Domingo
+513,UVX-0937,2020-07-14 15:01:57,Habilitada,Guayaquil,Peaje Chivería
+514,IRD-0053,2020-02-27 18:30:57,Habilitada,Cuenca,Peaje Chaquilcay
+515,CQS-5244,2020-07-21 22:57:42,Habilitada,Guayaquil,Peaje Chivería
+516,JTW-8310,2020-04-22 15:16:00,Habilitada,Cuenca,Peaje Chaquilcay
+517,UPV-2183,2020-02-04 06:42:56,Habilitada,Ambato,Peaje San Andrés
+518,UUT-8258,2020-06-11 10:30:24,Habilitada,Manta,Peaje Manta-Rocafuerte
+519,UWP-1435,2020-10-08 06:05:48,Habilitada,Riobamba,Peaje San Juan
+520,TIN-0734,2021-06-07 00:19:00,Habilitada,Guayaquil,Peaje Yaguachi
+521,LZM-0682,2024-02-08 10:17:21,Habilitada,Manta,Peaje Manta-Rocafuerte
+522,XLL-5177,2025-08-09 07:34:56,Habilitada,Guayaquil,Peaje Chivería
+523,HQH-1460,2023-08-13 19:26:23,Bloqueada,Ambato,Peaje San Andrés
+524,ERP-3120,2024-07-22 11:55:28,Habilitada,Manta,Peaje Manta-Rocafuerte
+525,ESQ-6503,2025-12-14 03:27:18,Habilitada,Cuenca,Peaje Chaquilcay
+526,UUQ-9962,2025-07-07 09:27:03,Habilitada,Cuenca,Peaje Chaquilcay
+527,ETR-4616,2020-09-24 11:39:04,Habilitada,Quito,Peaje Rumiñahui
+528,MLE-2895,2022-08-23 01:26:05,Habilitada,Quito,Peaje Oyacoto
+529,MWX-2154,2020-05-22 20:22:56,Habilitada,Santo Domingo,Peaje Santo Domingo
+530,XMK-5180,2020-07-14 23:30:50,Habilitada,Cuenca,Peaje Chaquilcay
+531,LTM-5341,2020-09-09 22:52:30,Habilitada,Machala,Peaje El Garrido
+532,JCV-0576,2024-04-05 08:08:34,Habilitada,Manta,Peaje Manta-Rocafuerte
+533,UDR-4031,2024-01-09 13:01:59,Habilitada,Riobamba,Peaje San Juan
+534,TQX-6059,2021-02-19 06:50:20,Habilitada,Ambato,Peaje San Andrés
+535,GQK-0569,2021-11-23 08:25:03,Bloqueada,Cuenca,Peaje Chaquilcay
+536,TTI-7252,2023-01-05 08:51:40,Habilitada,Manta,Peaje Manta-Rocafuerte
+537,HLI-7893,2024-12-28 12:23:11,Habilitada,Riobamba,Peaje San Juan
+538,GGS-1215,2023-10-30 23:53:34,Habilitada,Manta,Peaje Manta-Rocafuerte
+539,BXQ-6157,2023-04-22 13:52:04,Suspendida,Santo Domingo,Peaje Santo Domingo
+540,CDD-4185,2023-09-17 21:58:51,Habilitada,Manta,Peaje Manta-Rocafuerte
+541,BNY-8327,2022-12-23 03:54:38,Suspendida,Guayaquil,Peaje Yaguachi
+542,JKL-0858,2022-03-08 16:30:17,Habilitada,Quito,Peaje Rumiñahui
+543,ACM-4169,2020-12-10 02:43:38,Habilitada,Riobamba,Peaje San Juan
+544,UYR-4430,2023-07-21 00:15:29,Habilitada,Riobamba,Peaje San Juan
+545,EFG-0998,2023-10-08 16:53:46,Habilitada,Manta,Peaje Manta-Rocafuerte
+546,IVI-4655,2021-11-25 09:00:12,Habilitada,Santo Domingo,Peaje Santo Domingo
+547,XSA-1673,2024-04-07 13:44:48,Habilitada,Quito,Peaje Oyacoto
+548,BMW-3342,2021-09-03 09:56:07,Habilitada,Guayaquil,Peaje Chivería
+549,ACM-4169,2024-10-22 18:15:57,Habilitada,Guayaquil,Peaje Yaguachi
+550,IKN-6851,2025-12-08 13:48:12,Habilitada,Riobamba,Peaje San Juan
+551,ETE-5563,2021-05-06 12:31:59,Habilitada,Guayaquil,Peaje Chivería
+552,MXH-7310,2020-04-02 02:51:10,Habilitada,Ambato,Peaje San Andrés
+553,LZG-6413,2023-06-03 09:52:08,Habilitada,Riobamba,Peaje San Juan
+554,IOX-3932,2023-07-24 13:26:18,Habilitada,Riobamba,Peaje San Juan
+555,ACE-1986,2021-07-13 04:56:55,Habilitada,Quito,Peaje Rumiñahui
+556,AIT-1591,2021-01-14 21:37:11,Habilitada,Manta,Peaje Manta-Rocafuerte
+557,MGP-2624,2021-08-21 20:32:50,Habilitada,Guayaquil,Peaje Chivería
+558,EHV-4088,2025-11-25 19:04:06,Habilitada,Guayaquil,Peaje Yaguachi
+559,PYQ-9462,2023-11-02 09:13:13,Habilitada,Quito,Peaje Oyacoto
+560,UVQ-3903,2025-12-14 05:15:26,Suspendida,Machala,Peaje El Garrido
+561,LHQ-6991,2020-12-24 03:32:38,Habilitada,Manta,Peaje Manta-Rocafuerte
+562,LTJ-3444,2021-11-15 22:50:14,Habilitada,Santo Domingo,Peaje Santo Domingo
+563,ANC-1867,2021-07-05 13:48:59,Habilitada,Santo Domingo,Peaje Santo Domingo
+564,XSA-1673,2025-02-23 16:24:31,Habilitada,Cuenca,Peaje Chaquilcay
+565,ILW-1906,2025-07-09 09:20:16,Habilitada,Cuenca,Peaje Chaquilcay
+566,BBD-0886,2020-12-12 12:47:52,Habilitada,Machala,Peaje El Garrido
+567,IIV-4441,2025-08-13 23:42:02,Bloqueada,Quito,Peaje Oyacoto
+568,UVQ-3903,2025-06-21 18:05:02,Habilitada,Ambato,Peaje San Andrés
+569,IRE-7271,2024-08-31 10:40:07,Habilitada,Machala,Peaje El Garrido
+570,EAA-0396,2021-07-14 01:41:07,Habilitada,Ambato,Peaje San Andrés
+571,ISV-1956,2020-10-19 20:33:06,Habilitada,Guayaquil,Peaje Chivería
+572,AAL-5699,2021-08-22 15:36:21,Habilitada,Manta,Peaje Manta-Rocafuerte
+573,PHM-2971,2024-06-04 17:51:32,Habilitada,Manta,Peaje Manta-Rocafuerte
+574,XZB-1345,2025-11-11 22:13:46,Habilitada,Santo Domingo,Peaje Santo Domingo
+575,HOM-8258,2021-08-09 17:28:56,Habilitada,Manta,Peaje Manta-Rocafuerte
+576,BEE-8163,2024-01-11 10:03:41,Habilitada,Machala,Peaje El Garrido
+577,CPT-0364,2025-11-27 04:47:52,Suspendida,Quito,Peaje Oyacoto
+578,ABM-2548,2022-01-19 16:24:52,Habilitada,Riobamba,Peaje San Juan
+579,UXV-9196,2025-10-26 21:42:32,Habilitada,Guayaquil,Peaje Yaguachi
+580,XMO-4070,2020-12-11 19:00:55,Habilitada,Manta,Peaje Manta-Rocafuerte
+581,UOV-2113,2021-01-04 21:22:34,Habilitada,Cuenca,Peaje Chaquilcay
+582,BKM-7400,2025-04-24 22:45:57,Habilitada,Santo Domingo,Peaje Santo Domingo
+583,HEH-2500,2024-01-19 04:07:58,Habilitada,Quito,Peaje Rumiñahui
+584,IVI-4655,2023-02-26 17:53:45,Habilitada,Guayaquil,Peaje Chivería
+585,BEN-3805,2023-03-31 07:35:21,Habilitada,Santo Domingo,Peaje Santo Domingo
+586,UYT-8346,2025-08-28 06:56:23,Habilitada,Manta,Peaje Manta-Rocafuerte
+587,XPX-3566,2023-07-10 10:41:23,Habilitada,Guayaquil,Peaje Chivería
+588,UAB-5369,2020-08-03 00:01:59,Habilitada,Manta,Peaje Manta-Rocafuerte
+589,JZY-6279,2020-07-08 11:25:54,Habilitada,Ambato,Peaje San Andrés
+590,LSY-3662,2025-11-06 05:36:12,Habilitada,Guayaquil,Peaje Yaguachi
+591,IEI-4854,2025-06-18 17:59:34,Habilitada,Santo Domingo,Peaje Santo Domingo
+592,GOW-4029,2025-05-04 00:27:17,Habilitada,Guayaquil,Peaje Yaguachi
+593,JBZ-6833,2025-01-30 23:56:16,Habilitada,Machala,Peaje El Garrido
+594,UYT-8346,2025-04-07 08:29:00,Bloqueada,Riobamba,Peaje San Juan
+595,TRT-5191,2023-05-12 03:10:02,Habilitada,Cuenca,Peaje Chaquilcay
+596,PMO-7255,2022-05-10 19:14:46,Habilitada,Guayaquil,Peaje Yaguachi
+597,MYT-7807,2021-07-05 18:58:24,Habilitada,Cuenca,Peaje Chaquilcay
+598,IAG-9241,2022-12-21 17:06:17,Habilitada,Machala,Peaje El Garrido
+599,URJ-7488,2020-03-16 23:40:57,Habilitada,Manta,Peaje Manta-Rocafuerte
+600,ITG-6938,2025-05-26 12:52:49,Habilitada,Riobamba,Peaje San Juan
+601,MWX-2154,2023-01-06 12:39:23,Habilitada,Manta,Peaje Manta-Rocafuerte
+602,IUT-3579,2024-05-18 17:58:49,Habilitada,Guayaquil,Peaje Yaguachi
+603,UUR-1269,2021-02-08 10:25:06,Habilitada,Santo Domingo,Peaje Santo Domingo
+604,GGF-1354,2023-01-28 20:07:24,Habilitada,Quito,Peaje Rumiñahui
+605,BBD-0886,2024-03-16 08:54:33,Habilitada,Ambato,Peaje San Andrés
+606,UAX-3828,2020-05-12 01:25:46,Habilitada,Cuenca,Peaje Chaquilcay
+607,CHY-2789,2025-06-15 04:31:01,Habilitada,Santo Domingo,Peaje Santo Domingo
+608,HIJ-5880,2025-10-16 07:52:55,Habilitada,Cuenca,Peaje Chaquilcay
+609,BPA-3234,2023-11-01 10:17:01,Habilitada,Guayaquil,Peaje Chivería
+610,CLN-3685,2022-02-16 13:59:17,Habilitada,Quito,Peaje Rumiñahui
+611,AAL-5699,2022-08-23 18:05:41,Habilitada,Guayaquil,Peaje Yaguachi
+612,XOZ-9521,2024-08-08 23:54:58,Habilitada,Quito,Peaje Oyacoto
+613,UDR-4031,2023-03-29 10:56:36,Habilitada,Machala,Peaje El Garrido
+614,LPO-6741,2021-09-04 10:09:46,Habilitada,Manta,Peaje Manta-Rocafuerte
+615,HFD-1023,2025-09-25 04:07:57,Habilitada,Guayaquil,Peaje Chivería
+616,JIN-8142,2023-02-05 03:26:27,Habilitada,Guayaquil,Peaje Chivería
+617,CRJ-1431,2025-11-15 17:29:18,Habilitada,Riobamba,Peaje San Juan
+618,AJB-3647,2020-11-15 22:44:30,Habilitada,Guayaquil,Peaje Chivería
+619,ABH-7849,2024-04-14 11:11:22,Habilitada,Manta,Peaje Manta-Rocafuerte
+620,AVC-2847,2023-04-13 19:49:46,Habilitada,Guayaquil,Peaje Chivería
+621,MWX-2154,2022-05-26 04:54:13,Habilitada,Manta,Peaje Manta-Rocafuerte
+622,HWS-8930,2021-07-28 01:45:47,Habilitada,Quito,Peaje Rumiñahui
+623,BGF-1386,2020-02-04 19:41:16,Habilitada,Ambato,Peaje San Andrés
+624,BKM-7400,2021-03-12 23:30:42,Habilitada,Ambato,Peaje San Andrés
+625,PMO-7255,2023-12-25 20:47:49,Habilitada,Ambato,Peaje San Andrés
+626,MFC-0024,2020-02-26 20:50:37,Habilitada,Guayaquil,Peaje Chivería
+627,BJC-0479,2021-07-06 07:19:18,Suspendida,Santo Domingo,Peaje Santo Domingo
+628,BJC-0479,2023-06-19 21:12:25,Habilitada,Cuenca,Peaje Chaquilcay
+629,GLH-7561,2020-07-25 13:57:03,Habilitada,Cuenca,Peaje Chaquilcay
+630,HYD-2892,2020-01-20 10:36:28,Bloqueada,Santo Domingo,Peaje Santo Domingo
+631,XZV-8162,2025-02-03 11:53:01,Habilitada,Ambato,Peaje San Andrés
+632,GQO-9555,2025-01-07 04:25:06,Habilitada,Guayaquil,Peaje Chivería
+633,UJF-3191,2022-05-11 16:56:28,Habilitada,Manta,Peaje Manta-Rocafuerte
+634,BHJ-0598,2023-10-22 11:47:39,Habilitada,Manta,Peaje Manta-Rocafuerte
+635,UKY-4116,2025-05-27 15:47:14,Habilitada,Cuenca,Peaje Chaquilcay
+636,PLV-2259,2024-01-17 10:07:14,Habilitada,Guayaquil,Peaje Yaguachi
+637,EBS-9251,2021-11-12 00:08:09,Habilitada,Machala,Peaje El Garrido
+638,JZY-6279,2022-07-15 18:32:54,Habilitada,Guayaquil,Peaje Chivería
+639,EIL-7857,2024-08-10 09:45:59,Habilitada,Manta,Peaje Manta-Rocafuerte
+640,LJW-4027,2023-11-29 09:17:36,Habilitada,Ambato,Peaje San Andrés
+641,AED-5188,2021-12-26 05:39:28,Habilitada,Ambato,Peaje San Andrés
+642,TEJ-2778,2023-06-18 04:17:57,Habilitada,Riobamba,Peaje San Juan
+643,LVN-3455,2020-07-01 23:53:06,Habilitada,Riobamba,Peaje San Juan
+644,PTN-2271,2021-03-06 08:24:38,Habilitada,Guayaquil,Peaje Yaguachi
+645,BLY-3554,2020-02-21 23:02:25,Habilitada,Quito,Peaje Rumiñahui
+646,ESQ-6503,2020-08-11 17:25:38,Habilitada,Guayaquil,Peaje Chivería
+647,UDR-4031,2025-11-08 01:31:57,Habilitada,Machala,Peaje El Garrido
+648,HTW-1568,2025-09-19 13:00:29,Habilitada,Guayaquil,Peaje Yaguachi
+649,HFN-4462,2025-12-22 18:08:24,Habilitada,Riobamba,Peaje San Juan
+650,CNW-9224,2022-11-16 10:06:55,Suspendida,Manta,Peaje Manta-Rocafuerte
+651,MJS-1057,2021-10-17 00:57:52,Habilitada,Guayaquil,Peaje Chivería
+652,LUH-7655,2021-11-21 01:38:58,Habilitada,Manta,Peaje Manta-Rocafuerte
+653,XWM-1770,2021-02-02 09:47:49,Habilitada,Guayaquil,Peaje Chivería
+654,CWQ-6582,2025-12-25 22:26:52,Habilitada,Manta,Peaje Manta-Rocafuerte
+655,GPO-6766,2021-05-09 09:19:22,Habilitada,Guayaquil,Peaje Chivería
+656,LTK-1423,2025-12-30 22:46:48,Habilitada,Santo Domingo,Peaje Santo Domingo
+657,BPA-3234,2022-12-13 20:53:33,Habilitada,Quito,Peaje Oyacoto
+658,GTT-0854,2025-06-15 21:22:06,Habilitada,Guayaquil,Peaje Chivería
+659,HEH-1997,2023-07-02 18:55:58,Habilitada,Santo Domingo,Peaje Santo Domingo
+660,PTN-2271,2024-03-23 14:46:57,Habilitada,Ambato,Peaje San Andrés
+661,JQT-8482,2020-11-25 22:10:52,Suspendida,Cuenca,Peaje Chaquilcay
+662,EMB-4276,2020-07-03 21:13:13,Habilitada,Quito,Peaje Rumiñahui
+663,MXH-7310,2024-05-18 11:21:17,Habilitada,Santo Domingo,Peaje Santo Domingo
+664,BJC-0479,2022-11-02 09:52:12,Habilitada,Cuenca,Peaje Chaquilcay
+665,PHM-2971,2025-07-04 13:29:19,Habilitada,Ambato,Peaje San Andrés
+666,XBI-7204,2021-06-08 06:07:31,Habilitada,Ambato,Peaje San Andrés
+667,PHM-2971,2022-12-10 01:10:58,Bloqueada,Manta,Peaje Manta-Rocafuerte
+668,HRZ-6297,2022-08-14 21:05:17,Habilitada,Ambato,Peaje San Andrés
+669,TFG-2767,2021-07-05 10:46:54,Habilitada,Ambato,Peaje San Andrés
+670,ULC-4671,2021-07-21 08:46:43,Habilitada,Manta,Peaje Manta-Rocafuerte
+671,MBW-7437,2022-08-30 01:46:33,Habilitada,Manta,Peaje Manta-Rocafuerte
+672,ACM-4169,2021-07-27 16:01:31,Habilitada,Guayaquil,Peaje Chivería
+673,UDC-8098,2025-07-08 02:13:37,Habilitada,Riobamba,Peaje San Juan
+674,MZL-4547,2021-08-12 10:51:46,Habilitada,Santo Domingo,Peaje Santo Domingo
+675,ACM-4169,2023-01-07 21:52:03,Habilitada,Quito,Peaje Oyacoto
+676,HFD-1023,2024-03-30 01:48:07,Habilitada,Manta,Peaje Manta-Rocafuerte
+677,BJD-9055,2025-05-28 11:58:52,Habilitada,Quito,Peaje Oyacoto
+678,XEK-4091,2024-01-03 11:23:35,Habilitada,Quito,Peaje Rumiñahui
+679,HGI-0396,2021-10-20 07:15:47,Habilitada,Quito,Peaje Oyacoto
+680,ERX-8394,2024-07-01 13:51:04,Habilitada,Machala,Peaje El Garrido
+681,UDO-1321,2021-01-14 07:29:08,Suspendida,Manta,Peaje Manta-Rocafuerte
+682,CHD-2359,2024-04-12 03:09:35,Habilitada,Guayaquil,Peaje Chivería
+683,JRU-6440,2023-03-17 14:32:20,Habilitada,Machala,Peaje El Garrido
+684,PGV-5855,2023-11-01 12:48:28,Habilitada,Cuenca,Peaje Chaquilcay
+685,PDS-3262,2022-04-28 13:34:41,Habilitada,Manta,Peaje Manta-Rocafuerte
+686,BMW-3342,2025-02-23 11:55:54,Habilitada,Guayaquil,Peaje Yaguachi
+687,LAN-9039,2024-05-25 07:13:09,Habilitada,Quito,Peaje Rumiñahui
+688,BYA-7587,2022-05-14 17:09:09,Habilitada,Ambato,Peaje San Andrés
+689,XFA-3231,2020-01-04 00:33:19,Habilitada,Machala,Peaje El Garrido
+690,CFO-7751,2023-02-27 04:46:00,Habilitada,Ambato,Peaje San Andrés
+691,UVQ-3903,2024-03-28 07:36:47,Habilitada,Santo Domingo,Peaje Santo Domingo
+692,GNT-5033,2022-03-15 04:57:37,Habilitada,Cuenca,Peaje Chaquilcay
+693,CCP-3232,2023-05-19 00:15:50,Habilitada,Santo Domingo,Peaje Santo Domingo
+694,UUT-8258,2022-05-08 11:33:03,Habilitada,Manta,Peaje Manta-Rocafuerte
+695,UVX-0937,2022-01-29 06:33:50,Habilitada,Machala,Peaje El Garrido
+696,IIC-5620,2023-06-25 01:27:02,Habilitada,Machala,Peaje El Garrido
+697,XSE-7256,2022-08-25 23:43:29,Habilitada,Guayaquil,Peaje Chivería
+698,LST-1563,2022-03-07 22:21:44,Habilitada,Ambato,Peaje San Andrés
+699,BKM-7400,2021-08-30 00:11:32,Habilitada,Manta,Peaje Manta-Rocafuerte
+700,LDK-8190,2023-08-14 02:51:21,Habilitada,Santo Domingo,Peaje Santo Domingo
+701,HZB-7140,2024-08-12 16:10:34,Habilitada,Guayaquil,Peaje Yaguachi
+702,ATK-4605,2025-02-27 07:58:01,Habilitada,Guayaquil,Peaje Chivería
+703,AKP-6346,2021-02-04 15:08:32,Habilitada,Guayaquil,Peaje Chivería
+704,CJM-9625,2023-02-20 03:53:31,Habilitada,Riobamba,Peaje San Juan
+705,JZS-2223,2023-11-25 07:46:28,Habilitada,Santo Domingo,Peaje Santo Domingo
+706,UTA-9712,2021-04-25 15:52:22,Habilitada,Cuenca,Peaje Chaquilcay
+707,LSZ-2729,2021-12-02 20:13:31,Habilitada,Guayaquil,Peaje Chivería
+708,UVX-0937,2020-03-29 20:27:11,Habilitada,Quito,Peaje Rumiñahui
+709,UDO-1321,2024-11-22 18:45:23,Habilitada,Quito,Peaje Rumiñahui
+710,LOC-0456,2024-07-02 08:02:48,Habilitada,Quito,Peaje Rumiñahui
+711,LDK-8190,2022-07-03 08:08:20,Habilitada,Guayaquil,Peaje Chivería
+712,ITS-2963,2022-12-26 11:32:54,Habilitada,Santo Domingo,Peaje Santo Domingo
+713,BLR-2804,2025-07-28 05:28:22,Bloqueada,Santo Domingo,Peaje Santo Domingo
+714,BXQ-6157,2022-11-04 16:53:48,Habilitada,Guayaquil,Peaje Yaguachi
+715,XGL-4438,2021-05-27 05:21:37,Habilitada,Cuenca,Peaje Chaquilcay
+716,UBK-6188,2024-12-11 01:02:32,Habilitada,Santo Domingo,Peaje Santo Domingo
+717,GQK-0569,2021-08-29 06:55:22,Habilitada,Guayaquil,Peaje Yaguachi
+718,XJX-9778,2021-11-14 20:10:25,Habilitada,Riobamba,Peaje San Juan
+719,EBS-9251,2022-05-18 01:36:04,Habilitada,Ambato,Peaje San Andrés
+720,EAN-0080,2020-11-26 12:34:42,Habilitada,Cuenca,Peaje Chaquilcay
+721,XGL-4438,2022-11-21 13:16:56,Habilitada,Santo Domingo,Peaje Santo Domingo
+722,CRJ-1431,2023-11-19 12:51:42,Habilitada,Cuenca,Peaje Chaquilcay
+723,HNU-6380,2024-08-21 01:42:57,Habilitada,Guayaquil,Peaje Chivería
+724,BQG-4367,2023-09-24 16:10:04,Habilitada,Quito,Peaje Rumiñahui
+725,XVF-1324,2025-09-09 15:22:53,Bloqueada,Santo Domingo,Peaje Santo Domingo
+726,BUO-4587,2025-01-20 15:58:41,Habilitada,Guayaquil,Peaje Yaguachi
+727,JDR-0447,2021-02-16 12:38:58,Habilitada,Guayaquil,Peaje Chivería
+728,LHQ-6991,2022-10-29 07:25:09,Habilitada,Quito,Peaje Oyacoto
+729,ARD-1579,2025-08-26 17:02:25,Habilitada,Ambato,Peaje San Andrés
+730,GMK-7879,2021-06-14 13:21:34,Habilitada,Guayaquil,Peaje Chivería
+731,UUQ-9962,2023-08-15 01:48:09,Habilitada,Manta,Peaje Manta-Rocafuerte
+732,JDM-2286,2020-08-10 21:06:04,Habilitada,Riobamba,Peaje San Juan
+733,UFW-0609,2021-12-09 14:44:04,Habilitada,Guayaquil,Peaje Chivería
+734,MWX-2154,2025-04-23 07:51:49,Habilitada,Guayaquil,Peaje Yaguachi
+735,LNS-5238,2020-08-24 09:39:29,Habilitada,Machala,Peaje El Garrido
+736,LKF-2747,2025-02-25 10:44:44,Habilitada,Santo Domingo,Peaje Santo Domingo
+737,HBJ-5557,2023-08-10 02:06:46,Habilitada,Machala,Peaje El Garrido
+738,XTN-7706,2022-10-30 13:01:21,Habilitada,Guayaquil,Peaje Chivería
+739,BCS-9994,2025-02-25 10:23:30,Habilitada,Riobamba,Peaje San Juan
+740,MBG-8702,2021-09-26 08:41:50,Habilitada,Guayaquil,Peaje Chivería
+741,HZL-1160,2021-05-29 19:03:25,Habilitada,Riobamba,Peaje San Juan
+742,ERP-3120,2025-06-26 14:41:47,Habilitada,Cuenca,Peaje Chaquilcay
+743,MIE-2577,2022-08-22 03:16:30,Habilitada,Santo Domingo,Peaje Santo Domingo
+744,UUQ-9962,2023-03-29 08:25:44,Habilitada,Ambato,Peaje San Andrés
+745,MBO-3342,2021-09-06 02:34:46,Habilitada,Guayaquil,Peaje Yaguachi
+746,UVQ-3903,2021-04-26 06:08:55,Habilitada,Santo Domingo,Peaje Santo Domingo
+747,UUQ-9962,2020-09-03 21:39:38,Suspendida,Riobamba,Peaje San Juan
+748,AMP-3990,2025-08-27 10:54:41,Habilitada,Ambato,Peaje San Andrés
+749,AII-4518,2021-05-14 22:37:49,Habilitada,Guayaquil,Peaje Yaguachi
+750,XGN-5997,2025-07-29 13:27:45,Habilitada,Riobamba,Peaje San Juan
+751,PVE-4011,2023-12-27 13:25:53,Habilitada,Manta,Peaje Manta-Rocafuerte
+752,XSE-7256,2024-09-27 02:10:06,Bloqueada,Manta,Peaje Manta-Rocafuerte
+753,GRJ-1391,2025-06-16 15:06:56,Habilitada,Santo Domingo,Peaje Santo Domingo
+754,CTN-4155,2025-01-28 08:17:56,Suspendida,Riobamba,Peaje San Juan
+755,LJW-4027,2023-10-05 01:29:52,Habilitada,Machala,Peaje El Garrido
+756,JTW-8310,2022-06-03 22:46:52,Habilitada,Ambato,Peaje San Andrés
+757,JXR-7402,2022-05-30 12:55:37,Habilitada,Cuenca,Peaje Chaquilcay
+758,JGP-3848,2022-02-19 17:58:57,Habilitada,Manta,Peaje Manta-Rocafuerte
+759,JXI-4373,2023-07-13 22:34:29,Habilitada,Santo Domingo,Peaje Santo Domingo
+760,JIN-8142,2024-10-22 05:09:08,Habilitada,Cuenca,Peaje Chaquilcay
+761,LUH-7655,2025-12-08 12:45:31,Habilitada,Guayaquil,Peaje Chivería
+762,AZW-1253,2022-05-11 01:02:58,Habilitada,Quito,Peaje Oyacoto
+763,HNU-6380,2022-06-04 02:52:12,Habilitada,Riobamba,Peaje San Juan
+764,UAB-5369,2022-05-21 10:43:58,Habilitada,Guayaquil,Peaje Chivería
+765,CXQ-3581,2021-11-06 10:34:54,Habilitada,Santo Domingo,Peaje Santo Domingo
+766,BCS-9994,2022-01-30 21:14:00,Habilitada,Guayaquil,Peaje Yaguachi
+767,CXY-0262,2023-04-24 14:35:17,Habilitada,Guayaquil,Peaje Chivería
+768,XBW-9373,2023-09-15 22:37:23,Habilitada,Quito,Peaje Oyacoto
+769,UAX-3828,2024-02-10 02:57:48,Habilitada,Santo Domingo,Peaje Santo Domingo
+770,GKP-0654,2024-01-30 13:12:09,Habilitada,Machala,Peaje El Garrido
+771,XEK-4091,2023-08-18 03:05:04,Habilitada,Cuenca,Peaje Chaquilcay
+772,ELC-4964,2020-12-25 09:14:43,Habilitada,Manta,Peaje Manta-Rocafuerte
+773,HKN-3939,2024-12-07 23:11:45,Suspendida,Quito,Peaje Oyacoto
+774,TER-4305,2025-07-04 18:44:35,Habilitada,Quito,Peaje Rumiñahui
+775,CLS-7819,2022-08-09 19:31:51,Habilitada,Guayaquil,Peaje Chivería
+776,IMC-5566,2025-11-22 15:48:47,Habilitada,Cuenca,Peaje Chaquilcay
+777,HNU-6380,2021-06-27 14:43:35,Habilitada,Riobamba,Peaje San Juan
+778,EKK-6047,2025-05-30 15:20:58,Habilitada,Ambato,Peaje San Andrés
+779,TSY-7044,2025-07-04 14:24:25,Habilitada,Guayaquil,Peaje Yaguachi
+780,CFO-7751,2022-06-08 09:35:47,Habilitada,Manta,Peaje Manta-Rocafuerte
+781,IIM-0341,2021-05-29 19:24:08,Habilitada,Guayaquil,Peaje Chivería
+782,BXC-0585,2025-04-18 00:51:00,Habilitada,Riobamba,Peaje San Juan
+783,PXL-3274,2024-09-01 22:30:57,Habilitada,Quito,Peaje Oyacoto
+784,BLY-3554,2022-04-22 13:57:11,Habilitada,Santo Domingo,Peaje Santo Domingo
+785,HWF-7552,2022-05-29 00:50:47,Habilitada,Guayaquil,Peaje Yaguachi
+786,BEN-7902,2021-02-12 02:36:20,Habilitada,Quito,Peaje Rumiñahui
+787,LHL-6674,2021-09-14 20:26:05,Habilitada,Cuenca,Peaje Chaquilcay
+788,LTF-5364,2020-06-05 16:31:29,Habilitada,Quito,Peaje Rumiñahui
+789,LKS-0984,2020-12-24 14:04:57,Habilitada,Quito,Peaje Rumiñahui
+790,AHM-6477,2021-07-22 14:08:14,Habilitada,Ambato,Peaje San Andrés
+791,JDM-1063,2022-09-08 20:28:08,Habilitada,Guayaquil,Peaje Chivería
+792,JQT-8482,2025-01-02 17:25:08,Habilitada,Santo Domingo,Peaje Santo Domingo
+793,AXN-7986,2021-03-14 08:17:51,Habilitada,Guayaquil,Peaje Yaguachi
+794,UBH-8424,2024-05-18 07:44:53,Suspendida,Manta,Peaje Manta-Rocafuerte
+795,XEU-7281,2023-07-21 06:55:15,Habilitada,Manta,Peaje Manta-Rocafuerte
+796,CHD-2359,2021-05-23 08:05:10,Habilitada,Quito,Peaje Rumiñahui
+797,UBK-6188,2021-03-09 08:20:19,Habilitada,Cuenca,Peaje Chaquilcay
+798,MBG-8702,2020-10-04 00:52:29,Habilitada,Santo Domingo,Peaje Santo Domingo
+799,HFD-1023,2024-09-08 11:51:58,Habilitada,Riobamba,Peaje San Juan
+800,POH-7961,2024-08-21 21:34:53,Habilitada,Manta,Peaje Manta-Rocafuerte
+801,EFG-0998,2024-12-17 17:19:43,Habilitada,Quito,Peaje Oyacoto
+802,GHR-8072,2025-08-27 14:45:20,Habilitada,Machala,Peaje El Garrido
+803,XPP-6825,2025-12-09 13:09:53,Habilitada,Santo Domingo,Peaje Santo Domingo
+804,XBI-7204,2024-07-16 20:34:48,Habilitada,Guayaquil,Peaje Yaguachi
+805,EBS-9251,2021-07-08 21:36:11,Habilitada,Guayaquil,Peaje Yaguachi
+806,TYW-5068,2023-10-01 14:34:56,Habilitada,Guayaquil,Peaje Chivería
+807,HEH-1997,2023-04-19 18:51:05,Habilitada,Ambato,Peaje San Andrés
+808,MEF-8032,2025-09-02 00:26:57,Habilitada,Machala,Peaje El Garrido
+809,UUB-2048,2021-10-22 18:02:52,Habilitada,Quito,Peaje Oyacoto
+810,IHT-2616,2021-01-10 02:55:52,Habilitada,Cuenca,Peaje Chaquilcay
+811,GZF-2551,2024-10-28 07:41:12,Habilitada,Cuenca,Peaje Chaquilcay
+812,XRL-0990,2023-06-16 18:38:12,Habilitada,Guayaquil,Peaje Chivería
+813,GIK-6033,2021-11-27 11:07:08,Habilitada,Manta,Peaje Manta-Rocafuerte
+814,TXB-9682,2022-04-06 07:44:52,Habilitada,Ambato,Peaje San Andrés
+815,BXC-0585,2025-07-23 00:26:53,Habilitada,Quito,Peaje Rumiñahui
+816,LUI-5437,2023-08-29 17:59:02,Habilitada,Quito,Peaje Rumiñahui
+817,PGV-5855,2022-05-27 15:32:03,Habilitada,Machala,Peaje El Garrido
+818,PJS-9373,2025-02-22 13:24:17,Habilitada,Quito,Peaje Rumiñahui
+819,UJN-4445,2023-10-19 20:19:59,Habilitada,Santo Domingo,Peaje Santo Domingo
+820,PZY-1795,2024-03-20 22:59:04,Habilitada,Riobamba,Peaje San Juan
+821,BFV-9610,2021-07-09 19:00:16,Habilitada,Guayaquil,Peaje Yaguachi
+822,LSZ-2729,2022-04-12 20:37:31,Habilitada,Manta,Peaje Manta-Rocafuerte
+823,MGP-2624,2021-04-29 16:00:27,Habilitada,Manta,Peaje Manta-Rocafuerte
+824,ERX-8394,2025-10-15 19:16:21,Habilitada,Machala,Peaje El Garrido
+825,TSY-7044,2024-03-15 06:22:22,Habilitada,Cuenca,Peaje Chaquilcay
+826,IRE-7271,2020-01-17 10:19:41,Habilitada,Cuenca,Peaje Chaquilcay
+827,PRS-4779,2022-06-03 05:58:04,Habilitada,Machala,Peaje El Garrido
+828,UXV-9196,2023-08-28 07:34:13,Habilitada,Quito,Peaje Oyacoto
+829,MBG-8702,2022-11-14 02:02:26,Habilitada,Manta,Peaje Manta-Rocafuerte
+830,EBS-9251,2021-12-25 22:05:39,Habilitada,Santo Domingo,Peaje Santo Domingo
+831,LOD-2400,2022-01-13 01:35:21,Habilitada,Ambato,Peaje San Andrés
+832,LBL-1440,2020-02-21 02:29:27,Habilitada,Cuenca,Peaje Chaquilcay
+833,GPD-5847,2023-07-26 23:30:07,Habilitada,Ambato,Peaje San Andrés
+834,MVX-1047,2022-08-10 03:17:21,Habilitada,Quito,Peaje Oyacoto
+835,EFP-8650,2022-05-24 06:29:59,Habilitada,Machala,Peaje El Garrido
+836,JXI-4373,2022-06-18 01:01:34,Habilitada,Cuenca,Peaje Chaquilcay
+837,TSU-4688,2025-03-04 20:26:48,Habilitada,Santo Domingo,Peaje Santo Domingo
+838,TPU-9333,2022-08-15 18:24:02,Habilitada,Manta,Peaje Manta-Rocafuerte
+839,UAB-5369,2021-01-06 08:35:41,Habilitada,Quito,Peaje Oyacoto
+840,PKQ-5185,2020-09-02 09:12:01,Habilitada,Guayaquil,Peaje Yaguachi
+841,XXE-1597,2023-04-05 00:58:44,Habilitada,Guayaquil,Peaje Yaguachi
+842,LSZ-2729,2025-02-05 22:42:41,Habilitada,Cuenca,Peaje Chaquilcay
+843,BYA-7587,2024-11-20 13:46:00,Habilitada,Quito,Peaje Rumiñahui
+844,LOC-0456,2024-01-18 03:00:55,Habilitada,Guayaquil,Peaje Yaguachi
+845,CJM-9625,2021-04-20 03:16:06,Habilitada,Cuenca,Peaje Chaquilcay
+846,TME-8150,2021-05-22 22:10:49,Habilitada,Guayaquil,Peaje Yaguachi
+847,MJB-0818,2020-10-16 14:21:17,Habilitada,Riobamba,Peaje San Juan
+848,LST-1563,2025-02-13 02:26:08,Habilitada,Guayaquil,Peaje Chivería
+849,TFX-4720,2020-09-17 23:49:48,Habilitada,Ambato,Peaje San Andrés
+850,XSE-7256,2024-01-14 20:14:44,Habilitada,Ambato,Peaje San Andrés
+851,LOC-0456,2023-04-27 07:55:07,Habilitada,Riobamba,Peaje San Juan
+852,AMG-9583,2025-03-29 06:41:42,Habilitada,Ambato,Peaje San Andrés
+853,JCV-0576,2020-09-12 23:58:40,Habilitada,Cuenca,Peaje Chaquilcay
+854,XHH-2707,2020-03-09 14:10:06,Habilitada,Machala,Peaje El Garrido
+855,ITG-6938,2021-04-24 18:37:56,Habilitada,Manta,Peaje Manta-Rocafuerte
+856,GSQ-3336,2024-08-28 16:49:44,Habilitada,Quito,Peaje Oyacoto
+857,UPV-2183,2022-11-08 00:13:17,Habilitada,Cuenca,Peaje Chaquilcay
+858,HJO-4030,2024-12-04 19:27:29,Habilitada,Riobamba,Peaje San Juan
+859,URZ-7357,2024-04-30 23:32:41,Habilitada,Ambato,Peaje San Andrés
+860,CVY-9594,2022-09-07 23:04:57,Habilitada,Machala,Peaje El Garrido
+861,TPU-9333,2024-04-18 03:46:27,Habilitada,Cuenca,Peaje Chaquilcay
+862,BSU-2912,2021-06-12 22:51:38,Habilitada,Riobamba,Peaje San Juan
+863,JMO-1070,2020-10-08 17:18:35,Habilitada,Manta,Peaje Manta-Rocafuerte
+864,PXL-3274,2023-03-14 02:28:06,Habilitada,Cuenca,Peaje Chaquilcay
+865,IFL-3308,2020-06-16 14:09:12,Habilitada,Guayaquil,Peaje Yaguachi
+866,UKS-5070,2024-05-25 09:04:08,Habilitada,Ambato,Peaje San Andrés
+867,XOZ-9521,2023-08-21 21:24:47,Habilitada,Quito,Peaje Oyacoto
+868,HOZ-2528,2021-01-13 19:39:29,Bloqueada,Ambato,Peaje San Andrés
+869,BIJ-8919,2025-01-22 00:54:10,Habilitada,Ambato,Peaje San Andrés
+870,GKP-0654,2024-05-05 06:26:40,Habilitada,Guayaquil,Peaje Yaguachi
+871,CQS-5244,2024-03-06 23:08:14,Habilitada,Riobamba,Peaje San Juan
+872,ERX-8394,2022-11-19 08:47:04,Habilitada,Quito,Peaje Oyacoto
+873,BSL-9844,2022-03-05 21:14:43,Habilitada,Machala,Peaje El Garrido
+874,MJS-1057,2022-02-14 10:21:07,Habilitada,Guayaquil,Peaje Chivería
+875,LEO-2038,2022-10-21 14:11:21,Suspendida,Guayaquil,Peaje Yaguachi
+876,URJ-7488,2023-09-11 11:21:08,Habilitada,Guayaquil,Peaje Yaguachi
+877,GGC-1206,2025-10-28 13:38:43,Habilitada,Manta,Peaje Manta-Rocafuerte
+878,IBO-2053,2022-03-07 21:41:26,Habilitada,Machala,Peaje El Garrido
+879,EHB-3205,2020-05-04 13:11:01,Habilitada,Quito,Peaje Rumiñahui
+880,BJZ-1772,2020-07-20 12:14:22,Habilitada,Cuenca,Peaje Chaquilcay
+881,LYH-3376,2021-01-25 19:10:48,Habilitada,Machala,Peaje El Garrido
+882,UAB-5369,2023-11-27 10:21:17,Habilitada,Quito,Peaje Rumiñahui
+883,JXD-4805,2021-05-01 23:52:42,Bloqueada,Santo Domingo,Peaje Santo Domingo
+884,TRK-1618,2020-01-15 01:42:38,Habilitada,Machala,Peaje El Garrido
+885,GHR-8072,2020-10-07 04:43:34,Habilitada,Machala,Peaje El Garrido
+886,CXQ-3581,2023-12-14 01:39:46,Habilitada,Ambato,Peaje San Andrés
+887,HIJ-5880,2024-04-24 22:21:39,Bloqueada,Riobamba,Peaje San Juan
+888,ARD-1579,2021-06-20 00:46:42,Habilitada,Ambato,Peaje San Andrés
+889,XPX-3566,2025-10-19 02:13:04,Habilitada,Riobamba,Peaje San Juan
+890,AHM-6477,2025-05-02 15:03:19,Habilitada,Cuenca,Peaje Chaquilcay
+891,LOW-2319,2024-03-16 07:35:13,Habilitada,Riobamba,Peaje San Juan
+892,BKM-7400,2024-10-16 14:41:23,Habilitada,Guayaquil,Peaje Chivería
+893,URZ-7357,2025-01-18 14:57:20,Habilitada,Machala,Peaje El Garrido
+894,XRL-0990,2022-01-01 01:38:56,Bloqueada,Cuenca,Peaje Chaquilcay
+895,LAK-0630,2025-01-31 23:18:01,Habilitada,Machala,Peaje El Garrido
+896,IIM-0341,2023-07-24 12:03:40,Habilitada,Riobamba,Peaje San Juan
+897,EIL-7857,2023-03-10 04:41:54,Habilitada,Guayaquil,Peaje Yaguachi
+898,IKN-6851,2024-10-26 13:15:55,Habilitada,Manta,Peaje Manta-Rocafuerte
+899,EGX-2623,2024-10-14 23:21:07,Habilitada,Manta,Peaje Manta-Rocafuerte
+900,TXB-9682,2022-04-04 07:22:00,Habilitada,Riobamba,Peaje San Juan
+901,MBT-2156,2025-05-15 06:02:13,Habilitada,Quito,Peaje Rumiñahui
+902,LTF-5364,2023-02-27 05:31:45,Habilitada,Santo Domingo,Peaje Santo Domingo
+903,TMN-7874,2022-04-21 16:12:50,Habilitada,Guayaquil,Peaje Chivería
+904,JRU-6440,2020-05-26 21:29:49,Habilitada,Ambato,Peaje San Andrés
+905,HHZ-7176,2023-06-01 01:04:29,Habilitada,Quito,Peaje Oyacoto
+906,GRJ-1391,2021-11-01 20:47:44,Habilitada,Guayaquil,Peaje Chivería
+907,ULC-4671,2021-04-05 15:30:41,Habilitada,Quito,Peaje Oyacoto
+908,BJC-0479,2025-03-06 23:56:44,Habilitada,Machala,Peaje El Garrido
+909,GOW-4029,2022-03-22 21:10:35,Suspendida,Manta,Peaje Manta-Rocafuerte
+910,LRU-3756,2024-11-02 01:21:31,Habilitada,Cuenca,Peaje Chaquilcay
+911,IUK-4836,2020-09-05 12:26:12,Habilitada,Cuenca,Peaje Chaquilcay
+912,ITN-2885,2020-10-02 10:32:41,Habilitada,Quito,Peaje Oyacoto
+913,PJW-0063,2021-02-07 02:32:02,Habilitada,Riobamba,Peaje San Juan
+914,GMV-6850,2020-12-10 07:20:34,Habilitada,Cuenca,Peaje Chaquilcay
+915,JAS-8179,2023-10-17 04:31:16,Habilitada,Riobamba,Peaje San Juan
+916,UVX-0937,2022-02-10 09:16:04,Habilitada,Ambato,Peaje San Andrés
+917,LRY-7825,2025-06-14 10:48:41,Habilitada,Riobamba,Peaje San Juan
+918,BEE-8163,2023-09-25 23:30:50,Habilitada,Quito,Peaje Oyacoto
+919,BJC-0479,2023-05-25 12:14:03,Habilitada,Manta,Peaje Manta-Rocafuerte
+920,TQX-6059,2025-06-29 19:50:28,Suspendida,Cuenca,Peaje Chaquilcay
+921,CVY-9594,2022-11-30 11:12:20,Habilitada,Guayaquil,Peaje Yaguachi
+922,GUK-1050,2024-07-18 02:06:10,Habilitada,Quito,Peaje Oyacoto
+923,UEU-9311,2021-05-17 00:29:26,Habilitada,Machala,Peaje El Garrido
+924,JTP-8592,2024-05-12 03:48:56,Bloqueada,Guayaquil,Peaje Yaguachi
+925,MWX-2154,2024-08-19 06:09:58,Habilitada,Guayaquil,Peaje Yaguachi
+926,UDO-1321,2022-03-17 11:10:27,Habilitada,Guayaquil,Peaje Yaguachi
+927,XBI-7204,2022-08-31 02:10:10,Habilitada,Manta,Peaje Manta-Rocafuerte
+928,TRT-5191,2020-08-30 06:00:35,Habilitada,Riobamba,Peaje San Juan
+929,AJB-3647,2022-11-30 10:22:58,Habilitada,Santo Domingo,Peaje Santo Domingo
+930,HJO-4030,2022-03-13 02:34:26,Habilitada,Cuenca,Peaje Chaquilcay
+931,MJS-1057,2022-05-16 06:36:41,Habilitada,Quito,Peaje Rumiñahui
+932,IIV-4441,2021-03-25 18:56:28,Habilitada,Quito,Peaje Rumiñahui
+933,HZL-1160,2021-10-25 05:34:27,Habilitada,Riobamba,Peaje San Juan
+934,IRD-0053,2021-11-07 04:21:36,Habilitada,Quito,Peaje Rumiñahui
+935,CTB-0982,2025-03-11 00:46:33,Habilitada,Ambato,Peaje San Andrés
+936,CGI-0562,2023-11-06 21:58:52,Habilitada,Santo Domingo,Peaje Santo Domingo
+937,EYM-1875,2020-03-10 20:58:33,Habilitada,Santo Domingo,Peaje Santo Domingo
+938,PZY-1795,2025-07-11 14:43:13,Habilitada,Riobamba,Peaje San Juan
+939,PBK-4610,2023-10-16 09:53:33,Habilitada,Santo Domingo,Peaje Santo Domingo
+940,BJD-9055,2022-10-16 11:33:08,Habilitada,Ambato,Peaje San Andrés
+941,IDR-6821,2024-09-30 04:48:45,Habilitada,Riobamba,Peaje San Juan
+942,JXI-4373,2021-12-29 07:45:15,Habilitada,Guayaquil,Peaje Yaguachi
+943,CVX-0928,2022-06-27 17:51:40,Habilitada,Guayaquil,Peaje Yaguachi
+944,BUL-5020,2025-10-15 19:49:11,Habilitada,Riobamba,Peaje San Juan
+945,EPA-1386,2024-11-10 02:16:24,Habilitada,Manta,Peaje Manta-Rocafuerte
+946,THG-5168,2024-10-27 09:41:04,Habilitada,Riobamba,Peaje San Juan
+947,CSC-5525,2025-12-11 06:35:09,Habilitada,Cuenca,Peaje Chaquilcay
+948,UKY-4116,2022-11-06 10:09:37,Habilitada,Guayaquil,Peaje Chivería
+949,CTE-9574,2025-11-20 20:22:56,Habilitada,Guayaquil,Peaje Chivería
+950,AEF-1793,2021-08-12 07:31:54,Bloqueada,Guayaquil,Peaje Chivería
+951,UUC-8080,2025-09-18 17:18:37,Habilitada,Ambato,Peaje San Andrés
+952,AMH-0588,2025-09-26 18:14:36,Bloqueada,Santo Domingo,Peaje Santo Domingo
+953,TST-9957,2023-08-26 23:31:39,Habilitada,Quito,Peaje Rumiñahui
+954,CWQ-6582,2022-09-19 04:45:26,Habilitada,Manta,Peaje Manta-Rocafuerte
+955,JDR-0447,2025-01-27 01:46:13,Habilitada,Machala,Peaje El Garrido
+956,GQK-0569,2024-04-29 20:19:51,Habilitada,Ambato,Peaje San Andrés
+957,CPP-5669,2024-02-21 05:01:17,Habilitada,Quito,Peaje Rumiñahui
+958,AEN-1298,2020-12-28 11:06:48,Habilitada,Quito,Peaje Oyacoto
+959,HFN-4462,2023-06-21 01:10:46,Habilitada,Guayaquil,Peaje Chivería
+960,UJF-3191,2022-11-29 03:18:37,Suspendida,Guayaquil,Peaje Yaguachi
+961,ETQ-9618,2020-09-18 11:07:32,Habilitada,Ambato,Peaje San Andrés
+962,ARD-1579,2020-05-15 20:16:44,Habilitada,Guayaquil,Peaje Yaguachi
+963,EMB-4276,2023-03-30 14:04:00,Habilitada,Quito,Peaje Rumiñahui
+964,XXG-5565,2024-11-09 14:09:53,Habilitada,Cuenca,Peaje Chaquilcay
+965,BJV-3378,2022-08-28 05:20:11,Habilitada,Guayaquil,Peaje Yaguachi
+966,LEA-6191,2023-06-25 06:24:09,Habilitada,Guayaquil,Peaje Yaguachi
+967,AIS-7711,2023-05-15 09:03:58,Suspendida,Santo Domingo,Peaje Santo Domingo
+968,UDR-4031,2025-09-02 05:24:02,Habilitada,Cuenca,Peaje Chaquilcay
+969,MJB-0818,2023-08-03 09:51:49,Habilitada,Riobamba,Peaje San Juan
+970,IYR-9699,2024-06-01 13:42:53,Habilitada,Riobamba,Peaje San Juan
+971,TFG-2767,2021-07-16 10:38:13,Bloqueada,Guayaquil,Peaje Yaguachi
+972,TRT-5191,2021-08-17 08:16:14,Habilitada,Guayaquil,Peaje Yaguachi
+973,XFA-3231,2023-11-20 06:22:26,Habilitada,Riobamba,Peaje San Juan
+974,TTD-2003,2021-06-07 10:14:33,Habilitada,Riobamba,Peaje San Juan
+975,LQS-3994,2021-01-20 05:30:17,Bloqueada,Santo Domingo,Peaje Santo Domingo
+976,CYC-4770,2020-11-07 05:01:20,Suspendida,Riobamba,Peaje San Juan
+977,GWD-1469,2022-01-23 22:06:16,Habilitada,Ambato,Peaje San Andrés
+978,BFV-9610,2024-03-12 13:03:19,Habilitada,Guayaquil,Peaje Chivería
+979,MKK-3427,2020-02-09 04:25:56,Habilitada,Cuenca,Peaje Chaquilcay
+980,HLI-7893,2021-11-17 20:41:29,Habilitada,Quito,Peaje Oyacoto
+981,UPD-6367,2025-09-28 08:07:31,Suspendida,Riobamba,Peaje San Juan
+982,ESD-7471,2023-09-01 21:47:03,Habilitada,Ambato,Peaje San Andrés
+983,CRJ-1431,2023-02-03 02:50:30,Habilitada,Guayaquil,Peaje Chivería
+984,CKB-7584,2021-12-03 14:03:25,Habilitada,Santo Domingo,Peaje Santo Domingo
+985,UDC-8098,2022-08-28 20:13:37,Habilitada,Quito,Peaje Rumiñahui
+986,UFW-0609,2021-06-04 05:07:54,Habilitada,Quito,Peaje Rumiñahui
+987,ABM-2548,2023-11-02 11:16:57,Habilitada,Riobamba,Peaje San Juan
+988,HZL-1160,2020-02-11 00:26:47,Habilitada,Guayaquil,Peaje Yaguachi
+989,LOC-0456,2021-06-12 01:14:11,Habilitada,Quito,Peaje Oyacoto
+990,HIJ-5880,2022-01-21 01:59:15,Habilitada,Quito,Peaje Oyacoto
+991,ILM-5132,2022-01-19 13:05:20,Habilitada,Machala,Peaje El Garrido
+992,PDY-0753,2023-05-31 16:28:39,Habilitada,Ambato,Peaje San Andrés
+993,MXQ-9893,2025-12-20 16:38:44,Habilitada,Santo Domingo,Peaje Santo Domingo
+994,JXI-4373,2021-04-03 06:59:29,Habilitada,Quito,Peaje Oyacoto
+995,TIN-0734,2022-05-28 07:51:52,Habilitada,Guayaquil,Peaje Chivería
+996,LOD-2400,2023-06-06 11:12:43,Habilitada,Guayaquil,Peaje Chivería
+997,ITN-2885,2024-08-29 07:36:53,Habilitada,Guayaquil,Peaje Chivería
+998,UAX-3828,2023-04-01 01:34:55,Habilitada,Santo Domingo,Peaje Santo Domingo
+999,MXM-5136,2025-01-08 14:31:08,Habilitada,Quito,Peaje Oyacoto
+1000,IFL-3308,2020-09-24 06:17:20,Habilitada,Quito,Peaje Rumiñahui

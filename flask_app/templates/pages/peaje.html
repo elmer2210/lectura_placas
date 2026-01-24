@@ -1,0 +1,257 @@
+{% extends 'base.html' %}
+
+{% block title %}Simulador de Peaje Inteligente{% endblock %}
+
+{% block extra_css %}
+<link href="{{ url_for('static', filename='css/peaje.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<!-- Barra de navegación -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm mb-4">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">
+            <i class="fas fa-video me-2"></i>
+            Sistema de Peaje Inteligente
+        </a>
+        <div class="navbar-nav ms-auto">
+            <a class="nav-link active" href="/peaje">
+                <i class="fas fa-camera me-1"></i>
+                Simulador
+            </a>
+            <a class="nav-link" href="/historial">
+                <i class="fas fa-history me-1"></i>
+                Historial
+            </a>
+            <a class="nav-link" href="/reportes">
+                <i class="fas fa-chart-line me-1"></i>
+                Reportes
+            </a>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid peaje-container">
+    <!-- Header -->
+    <div class="row mb-4">
+        <div class="col-12 text-center">
+            <h1 class="display-4 text-white">
+                <i class="fas fa-video me-2"></i>
+                Sistema de Peaje Inteligente
+            </h1>
+            <p class="lead text-white-50">Reconocimiento Automático de Placas - Comparativa de Algoritmos</p>
+        </div>
+    </div>
+
+    <!-- Simulador de Cámara -->
+    <div class="row justify-content-center mb-4">
+        <div class="col-md-8">
+            <div class="card camera-card shadow-lg">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0"><i class="fas fa-camera me-2"></i>Cámara de Peaje - Captura de Placa</h5>
+                </div>
+                <div class="card-body text-center">
+                    <div class="camera-view mb-4">
+                        <i class="fas fa-car fa-5x text-muted mb-3"></i>
+                        <input type="text" id="plate-input" class="form-control form-control-lg plate-input"
+                               placeholder="ABC-1234" maxlength="8">
+                        <small class="text-muted">Formato: ABC-1234 (3 letras - 4 números)</small>
+                    </div>
+
+                    <button id="btn-search" class="btn btn-primary btn-lg me-2" onclick="buscarPlaca()">
+                        <i class="fas fa-search me-2"></i>Buscar Vehículo
+                    </button>
+                    <button id="btn-random" class="btn btn-outline-secondary btn-lg" onclick="placaAleatoria()">
+                        <i class="fas fa-random me-2"></i>Placa Aleatoria
+                    </button>
+
+                    <div id="loading-spinner" class="mt-3" style="display: none;">
+                        <div class="spinner-border text-primary"></div>
+                        <p class="mt-2">Ejecutando búsqueda con ambos algoritmos...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resultados -->
+    <div id="results-area" style="display: none;">
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <div class="card shadow">
+                    <div class="card-header"><h5><i class="fas fa-id-card me-2"></i>Información del Vehículo</h5></div>
+                    <div class="card-body" id="vehicle-info"></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card shadow">
+                    <div class="card-header"><h5><i class="fas fa-traffic-light me-2"></i>Estado ANT</h5></div>
+                    <div class="card-body text-center" id="vehicle-status"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card shadow">
+                    <div class="card-header bg-success text-white">
+                        <h5><i class="fas fa-chart-bar me-2"></i>Comparativa de Algoritmos</h5>
+                    </div>
+                    <div class="card-body">
+                        <div id="comparison-chart" style="height: 400px;"></div>
+                        <div class="table-responsive mt-3">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Algoritmo</th>
+                                        <th>Tiempo Total</th>
+                                        <th>Ordenamiento</th>
+                                        <th>Búsqueda</th>
+                                        <th>Operaciones</th>
+                                        <th>Estado</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="comparison-table-body"></tbody>
+                            </table>
+                        </div>
+                        <div class="text-center mt-3">
+                            <h4><span class="badge bg-success" id="winner-badge"></span></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- No encontrado -->
+    <div id="not-found-message" class="alert alert-warning text-center" style="display: none;">
+        <i class="fas fa-exclamation-triangle me-2"></i>
+        <strong>Vehículo no encontrado</strong>
+        <p class="mb-0">La placa <span id="searched-plate"></span> no existe en la base de datos.</p>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+<script>
+async function buscarPlaca() {
+    const plateInput = document.getElementById('plate-input');
+    const plate = plateInput.value.trim().toUpperCase();
+
+    if (!/^[A-Z]{3}-\d{4}$/.test(plate)) {
+        alert('Formato inválido. Use: ABC-1234');
+        return;
+    }
+
+    document.getElementById('loading-spinner').style.display = 'block';
+    document.getElementById('results-area').style.display = 'none';
+    document.getElementById('not-found-message').style.display = 'none';
+
+    try {
+        const response = await fetch('/peaje/buscar', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({placa: plate})
+        });
+
+        const data = await response.json();
+        document.getElementById('loading-spinner').style.display = 'none';
+
+        if (data.success && data.found) {
+            mostrarResultados(data);
+        } else {
+            document.getElementById('searched-plate').textContent = plate;
+            document.getElementById('not-found-message').style.display = 'block';
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        alert('Error al buscar la placa');
+        document.getElementById('loading-spinner').style.display = 'none';
+    }
+}
+
+function mostrarResultados(data) {
+    document.getElementById('results-area').style.display = 'block';
+
+    // Información del vehículo
+    const vehicle = data.vehicle;
+    document.getElementById('vehicle-info').innerHTML = `
+        <p><strong>Placa:</strong> <span class="badge bg-dark fs-5">${vehicle.placa}</span></p>
+        <p><strong>ID:</strong> ${vehicle.id}</p>
+        <p><strong>Fecha:</strong> ${new Date(vehicle.fecha_registro).toLocaleString('es-EC')}</p>
+        <p><strong>Ubicación:</strong> ${vehicle.ubicacion_camara}</p>
+        <p><strong>Peaje:</strong> ${vehicle.peaje_ciudad}</p>
+    `;
+
+    // Estado
+    const estado = vehicle.estado_ANT;
+    let statusClass = estado === 'Suspendida' ? 'warning' : (estado === 'Bloqueada' ? 'danger' : 'success');
+    let statusIcon = estado === 'Suspendida' ? 'fa-exclamation-triangle' : (estado === 'Bloqueada' ? 'fa-ban' : 'fa-check-circle');
+
+    document.getElementById('vehicle-status').innerHTML = `
+        <i class="fas ${statusIcon} fa-5x text-${statusClass} mb-3"></i>
+        <h2 class="text-${statusClass}">${estado}</h2>
+    `;
+
+    // Comparativa
+    const comp = data.comparison;
+    document.getElementById('comparison-table-body').innerHTML = `
+        <tr ${comp.winner === 'Merge Sort' ? 'class="table-success"' : ''}>
+            <td><strong>Merge Sort</strong></td>
+            <td>${comp.merge_sort.total_time.toFixed(4)} ms</td>
+            <td>${comp.merge_sort.sort_time.toFixed(4)} ms</td>
+            <td>${comp.merge_sort.search_time.toFixed(4)} ms</td>
+            <td>${comp.merge_sort.comparisons.toLocaleString()}</td>
+            <td>${comp.winner === 'Merge Sort' ? '🏆 GANADOR' : ''}</td>
+        </tr>
+        <tr ${comp.winner === 'Radix Sort' ? 'class="table-success"' : ''}>
+            <td><strong>Radix Sort</strong></td>
+            <td>${comp.radix_sort.total_time.toFixed(4)} ms</td>
+            <td>${comp.radix_sort.sort_time.toFixed(4)} ms</td>
+            <td>${comp.radix_sort.search_time.toFixed(4)} ms</td>
+            <td>${comp.radix_sort.operations.toLocaleString()}</td>
+            <td>${comp.winner === 'Radix Sort' ? '🏆 GANADOR' : ''}</td>
+        </tr>
+    `;
+
+    document.getElementById('winner-badge').innerHTML =
+        `🏆 ${comp.winner} es ${comp.percentage_faster.toFixed(2)}% más rápido`;
+
+    // Gráfico Plotly
+    const trace1 = {
+        x: ['Tiempo Total', 'Ordenamiento', 'Búsqueda'],
+        y: [comp.merge_sort.total_time, comp.merge_sort.sort_time, comp.merge_sort.search_time],
+        name: 'Merge Sort',
+        type: 'bar',
+        marker: {color: '#007bff'}
+    };
+
+    const trace2 = {
+        x: ['Tiempo Total', 'Ordenamiento', 'Búsqueda'],
+        y: [comp.radix_sort.total_time, comp.radix_sort.sort_time, comp.radix_sort.search_time],
+        name: 'Radix Sort',
+        type: 'bar',
+        marker: {color: '#28a745'}
+    };
+
+    Plotly.newPlot('comparison-chart', [trace1, trace2], {
+        title: 'Comparativa de Tiempos de Ejecución',
+        barmode: 'group',
+        yaxis: {title: 'Tiempo (ms)'}
+    });
+}
+
+async function placaAleatoria() {
+    const response = await fetch('/api/vehicles/random');
+    const data = await response.json();
+    if (data.success) {
+        document.getElementById('plate-input').value = data.data.placa;
+    }
+}
+
+document.getElementById('plate-input').addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') buscarPlaca();
+});
+</script>
+{% endblock %}

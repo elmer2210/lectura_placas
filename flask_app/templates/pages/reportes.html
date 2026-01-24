@@ -1,0 +1,483 @@
+{% extends 'base.html' %}
+
+{% block title %}Reportes y Análisis Estadístico{% endblock %}
+
+{% block extra_css %}
+<link href="{{ url_for('static', filename='css/peaje.css') }}" rel="stylesheet">
+<style>
+.reportes-container {
+    padding: 2rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+.stats-card {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.stats-card:hover {
+    transform: translateY(-5px);
+}
+
+.metric-box {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.metric-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.metric-label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin: 0;
+}
+
+.chart-card {
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    margin-bottom: 2rem;
+}
+
+.chart-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.navbar-custom {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.table-alerta {
+    font-size: 0.9rem;
+}
+
+.badge-rank {
+    font-size: 1rem;
+    width: 35px;
+    height: 35px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<!-- Barra de navegación -->
+<nav class="navbar navbar-expand-lg navbar-light navbar-custom mb-4">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">
+            <i class="fas fa-video me-2"></i>
+            Sistema de Peaje Inteligente
+        </a>
+        <div class="navbar-nav ms-auto">
+            <a class="nav-link" href="/peaje">
+                <i class="fas fa-camera me-1"></i>
+                Simulador
+            </a>
+            <a class="nav-link" href="/historial">
+                <i class="fas fa-history me-1"></i>
+                Historial
+            </a>
+            <a class="nav-link active" href="/reportes">
+                <i class="fas fa-chart-line me-1"></i>
+                Reportes
+            </a>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid reportes-container">
+    <!-- Header -->
+    <div class="row mb-4">
+        <div class="col-12 text-center">
+            <h1 class="display-4 text-white">
+                <i class="fas fa-chart-line me-2"></i>
+                Reportes y Análisis Estadístico
+            </h1>
+            <p class="lead text-white-50">
+                Análisis Exploratorio de Datos del Sistema de Peaje
+            </p>
+        </div>
+    </div>
+
+    <!-- Loading -->
+    <div id="loading-reportes" class="text-center" style="display: none;">
+        <div class="spinner-border text-light" style="width: 3rem; height: 3rem;" role="status">
+            <span class="visually-hidden">Cargando análisis...</span>
+        </div>
+        <p class="text-white mt-3">Generando reportes estadísticos...</p>
+    </div>
+
+    <!-- Contenido Principal -->
+    <div id="reportes-content" style="display: none;">
+        <!-- Métricas Principales -->
+        <div class="row mb-4">
+            <div class="col-md-3">
+                <div class="metric-box">
+                    <p class="metric-value" id="total-busquedas">0</p>
+                    <p class="metric-label"><i class="fas fa-search me-1"></i> Total Búsquedas</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="metric-box" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);">
+                    <p class="metric-value" id="tasa-exito">0%</p>
+                    <p class="metric-label"><i class="fas fa-check-circle me-1"></i> Tasa de Éxito</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="metric-box" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                    <p class="metric-value" id="total-alertas">0</p>
+                    <p class="metric-label"><i class="fas fa-exclamation-triangle me-1"></i> Total Alertas</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="metric-box" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                    <p class="metric-value" id="tiempo-promedio">0ms</p>
+                    <p class="metric-label"><i class="fas fa-tachometer-alt me-1"></i> Tiempo Promedio</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- TOP 10 Placas con Alertas -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card stats-card">
+                    <div class="card-header bg-danger text-white">
+                        <h5 class="mb-0">
+                            <i class="fas fa-exclamation-triangle me-2"></i>
+                            TOP 10 Placas con Más Alertas (Suspendidas/Bloqueadas)
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div id="empty-alertas" class="text-center text-muted py-4" style="display: none;">
+                            <i class="fas fa-check-circle fa-3x mb-3"></i>
+                            <p>No hay placas con alertas en el sistema</p>
+                        </div>
+                        <div id="table-alertas-container">
+                            <div class="table-responsive">
+                                <table class="table table-hover table-alerta">
+                                    <thead class="table-dark">
+                                        <tr>
+                                            <th>Ranking</th>
+                                            <th><i class="fas fa-id-card me-1"></i> Placa</th>
+                                            <th><i class="fas fa-exclamation-circle me-1"></i> Total Alertas</th>
+                                            <th><i class="fas fa-traffic-light me-1"></i> Estado</th>
+                                            <th><i class="fas fa-map-marker-alt me-1"></i> Último Peaje</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="top-alertas-tbody">
+                                        <!-- Se llena con JavaScript -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gráficos de Distribución -->
+
+        <!-- Distribución por Estado ANT -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="chart-card">
+                    <h5 class="chart-title">
+                        <i class="fas fa-traffic-light me-2"></i>
+                        Distribución por Estado ANT
+                    </h5>
+                    <div id="chart-estados"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Distribución por Hora del Día -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="chart-card">
+                    <h5 class="chart-title">
+                        <i class="fas fa-clock me-2"></i>
+                        Distribución de Búsquedas por Hora del Día
+                    </h5>
+                    <div id="chart-horas"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TOP 10 Peajes con Más Capturas -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="chart-card">
+                    <h5 class="chart-title">
+                        <i class="fas fa-map-marker-alt me-2"></i>
+                        TOP 10 Peajes con Más Capturas
+                    </h5>
+                    <div id="chart-peajes"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Comparativa de Tiempos Promedio -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="chart-card">
+                    <h5 class="chart-title">
+                        <i class="fas fa-tachometer-alt me-2"></i>
+                        Tiempos Promedio de Algoritmos
+                    </h5>
+                    <div id="chart-tiempos"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Búsquedas por Día -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="chart-card">
+                    <h5 class="chart-title">
+                        <i class="fas fa-calendar-alt me-2"></i>
+                        Búsquedas por Día
+                    </h5>
+                    <div id="chart-dias"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+<script>
+// Cargar análisis al iniciar
+document.addEventListener('DOMContentLoaded', function() {
+    cargarAnalisis();
+});
+
+async function cargarAnalisis() {
+    // Mostrar loading
+    document.getElementById('loading-reportes').style.display = 'block';
+    document.getElementById('reportes-content').style.display = 'none';
+
+    try {
+        const response = await fetch('/api/reportes/analisis');
+        const data = await response.json();
+
+        if (data.success) {
+            mostrarMetricasPrincipales(data);
+            mostrarTopAlertas(data.top_alertas);
+            generarGraficoEstados(data.distribucion_estados);
+            generarGraficoHoras(data.distribucion_horas);
+            generarGraficoPeajes(data.top_peajes);
+            generarGraficoTiempos(data.tiempos_promedio);
+            generarGraficoDias(data.busquedas_por_dia);
+
+            // Mostrar contenido
+            document.getElementById('loading-reportes').style.display = 'none';
+            document.getElementById('reportes-content').style.display = 'block';
+        }
+    } catch (error) {
+        console.error('Error al cargar análisis:', error);
+        alert('Error al cargar los reportes');
+    }
+}
+
+function mostrarMetricasPrincipales(data) {
+    document.getElementById('total-busquedas').textContent = data.total_busquedas;
+    document.getElementById('tasa-exito').textContent = data.tasa_exito + '%';
+    document.getElementById('total-alertas').textContent = data.top_alertas.length > 0
+        ? data.top_alertas.reduce((sum, item) => sum + item.total_alertas, 0)
+        : 0;
+
+    const tiempoPromedio = (data.tiempos_promedio.merge_sort + data.tiempos_promedio.radix_sort) / 2;
+    document.getElementById('tiempo-promedio').textContent = tiempoPromedio.toFixed(3) + 'ms';
+}
+
+function mostrarTopAlertas(alertas) {
+    const tbody = document.getElementById('top-alertas-tbody');
+    const emptyDiv = document.getElementById('empty-alertas');
+    const tableContainer = document.getElementById('table-alertas-container');
+
+    if (!alertas || alertas.length === 0) {
+        emptyDiv.style.display = 'block';
+        tableContainer.style.display = 'none';
+        return;
+    }
+
+    emptyDiv.style.display = 'none';
+    tableContainer.style.display = 'block';
+    tbody.innerHTML = '';
+
+    alertas.forEach((alerta, index) => {
+        const row = document.createElement('tr');
+
+        let rankBadgeClass = 'bg-warning';
+        if (index === 0) rankBadgeClass = 'bg-danger';
+        else if (index === 1) rankBadgeClass = 'bg-warning';
+        else if (index === 2) rankBadgeClass = 'bg-info';
+        else rankBadgeClass = 'bg-secondary';
+
+        let estadoBadgeClass = alerta.estado === 'Bloqueada' ? 'bg-danger' : 'bg-warning';
+
+        row.innerHTML = `
+            <td>
+                <span class="badge ${rankBadgeClass} badge-rank">#${index + 1}</span>
+            </td>
+            <td><strong>${alerta.placa}</strong></td>
+            <td>
+                <span class="badge bg-danger">${alerta.total_alertas} alerta${alerta.total_alertas > 1 ? 's' : ''}</span>
+            </td>
+            <td>
+                <span class="badge ${estadoBadgeClass}">${alerta.estado}</span>
+            </td>
+            <td><small>${alerta.peaje}</small></td>
+        `;
+        tbody.appendChild(row);
+    });
+}
+
+function generarGraficoEstados(estados) {
+    const labels = Object.keys(estados);
+    const values = Object.values(estados);
+
+    const colors = labels.map(label => {
+        if (label === 'Habilitada') return '#28a745';
+        if (label === 'Suspendida') return '#ffc107';
+        if (label === 'Bloqueada') return '#dc3545';
+        return '#6c757d';
+    });
+
+    const data = [{
+        values: values,
+        labels: labels,
+        type: 'pie',
+        marker: { colors: colors },
+        textinfo: 'label+percent',
+        textposition: 'auto'
+    }];
+
+    const layout = {
+        height: 400,
+        margin: { t: 20, b: 20, l: 20, r: 20 },
+        showlegend: true
+    };
+
+    Plotly.newPlot('chart-estados', data, layout, {responsive: true});
+}
+
+function generarGraficoHoras(horas) {
+    const horasOrdenadas = Array.from({length: 24}, (_, i) => i);
+    const values = horasOrdenadas.map(h => horas[h] || 0);
+
+    const data = [{
+        x: horasOrdenadas.map(h => h + ':00'),
+        y: values,
+        type: 'bar',
+        marker: {
+            color: values,
+            colorscale: 'Viridis'
+        }
+    }];
+
+    const layout = {
+        height: 400,
+        xaxis: { title: 'Hora del Día' },
+        yaxis: { title: 'Número de Búsquedas' },
+        margin: { t: 20, b: 60, l: 60, r: 20 }
+    };
+
+    Plotly.newPlot('chart-horas', data, layout, {responsive: true});
+}
+
+function generarGraficoPeajes(peajes) {
+    const labels = Object.keys(peajes).slice(0, 10);
+    const values = Object.values(peajes).slice(0, 10);
+
+    const data = [{
+        x: values,
+        y: labels,
+        type: 'bar',
+        orientation: 'h',
+        marker: {
+            color: '#667eea'
+        }
+    }];
+
+    const layout = {
+        height: 400,
+        xaxis: { title: 'Número de Capturas' },
+        margin: { t: 20, b: 60, l: 150, r: 20 }
+    };
+
+    Plotly.newPlot('chart-peajes', data, layout, {responsive: true});
+}
+
+function generarGraficoTiempos(tiempos) {
+    const data = [{
+        x: ['Merge Sort', 'Radix Sort'],
+        y: [tiempos.merge_sort, tiempos.radix_sort],
+        type: 'bar',
+        marker: {
+            color: ['#007bff', '#28a745']
+        },
+        text: [tiempos.merge_sort.toFixed(4) + 'ms', tiempos.radix_sort.toFixed(4) + 'ms'],
+        textposition: 'auto'
+    }];
+
+    const layout = {
+        height: 400,
+        yaxis: { title: 'Tiempo Promedio (ms)' },
+        margin: { t: 20, b: 60, l: 60, r: 20 }
+    };
+
+    Plotly.newPlot('chart-tiempos', data, layout, {responsive: true});
+}
+
+function generarGraficoDias(dias) {
+    const labels = Object.keys(dias).sort();
+    const values = labels.map(d => dias[d]);
+
+    const data = [{
+        x: labels,
+        y: values,
+        type: 'scatter',
+        mode: 'lines+markers',
+        line: {
+            color: '#667eea',
+            width: 3
+        },
+        marker: {
+            size: 8,
+            color: '#764ba2'
+        }
+    }];
+
+    const layout = {
+        height: 400,
+        xaxis: { title: 'Fecha' },
+        yaxis: { title: 'Número de Búsquedas' },
+        margin: { t: 20, b: 60, l: 60, r: 20 }
+    };
+
+    Plotly.newPlot('chart-dias', data, layout, {responsive: true});
+}
+</script>
+{% endblock %}
