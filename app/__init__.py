@@ -70,19 +70,19 @@ from app.analysis import (
 )
 
 # Importar funciones de reporte
-from app.report import (
+"""from app.report import (
     generate_sorting_report,
     generate_conclusion_report,
     save_report
-)
+)"""
 
 # Importar pipeline
-from app.pipeline import (
+"""from app.pipeline import (
     run_cleaning_pipeline,
     run_sorting_pipeline,
     run_analysis_pipeline,
     run_full_pipeline
-)
+)"""
 
 # Versión del paquete
 __version__ = '1.0.0'
