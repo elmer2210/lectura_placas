@@ -57,13 +57,23 @@ class SearchService:
 
     def _save_to_history(self, result: dict):
         """Guarda búsqueda en historial."""
+        merge_res = result['merge_sort_result']
+        radix_res = result['radix_sort_result']
+
         entry = {
             'timestamp': datetime.now().isoformat(),
             'plate': result['plate_searched'],
             'found': result['found'],
             'winner': result['winner'],
-            'merge_time': result['merge_sort_result']['total_time_ms'],
-            'radix_time': result['radix_sort_result']['total_time_ms'],
+            'merge_time': merge_res['total_time_ms'],
+            'radix_time': radix_res['total_time_ms'],
+            # Métricas de algoritmos
+            'merge_comparisons': merge_res['total_comparisons'],
+            'merge_search_comparisons': merge_res['search_comparisons'],
+            'merge_recursive_calls': merge_res['recursive_calls'],
+            'radix_operations': radix_res['sort_operations'],
+            'radix_search_comparisons': radix_res['search_comparisons'],
+            'radix_passes': radix_res['passes'],
             # Incluir datos del vehículo si fue encontrado
             'peaje_ciudad': result['vehicle']['peaje_ciudad'] if result['found'] and result['vehicle'] else None,
             'estado_ANT': result['vehicle']['estado_ANT'] if result['found'] and result['vehicle'] else None,

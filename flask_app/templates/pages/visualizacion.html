@@ -1,0 +1,789 @@
+{% extends 'base.html' %}
+
+{% block title %}Visualización de Algoritmos{% endblock %}
+
+{% block extra_css %}
+<link href="{{ url_for('static', filename='css/peaje.css') }}" rel="stylesheet">
+<style>
+.viz-container {
+    padding: 2rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+.viz-card {
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    margin-bottom: 2rem;
+}
+canvas {
+    display: block;
+    width: 100%;
+    background: #1a1a2e;
+    border-radius: 8px;
+    border: 1px solid #333;
+}
+.controls-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+}
+.metric-display {
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+    background: #f8f9fa;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+}
+.phase-label {
+    font-size: 0.8rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+.speed-display {
+    min-width: 35px;
+    text-align: center;
+    font-weight: bold;
+}
+#plate-list-preview {
+    font-family: 'Courier New', monospace;
+    font-size: 0.8rem;
+    max-height: 60px;
+    overflow-y: auto;
+    background: #f0f0f0;
+    padding: 0.5rem;
+    border-radius: 5px;
+    word-break: break-all;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm mb-4">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">
+            <i class="fas fa-video me-2"></i>
+            Sistema de Peaje Inteligente
+        </a>
+        <div class="navbar-nav ms-auto">
+            <a class="nav-link" href="/peaje">
+                <i class="fas fa-camera me-1"></i>Simulador
+            </a>
+            <a class="nav-link" href="/historial">
+                <i class="fas fa-history me-1"></i>Historial
+            </a>
+            <a class="nav-link" href="/reportes">
+                <i class="fas fa-chart-line me-1"></i>Reportes
+            </a>
+            <a class="nav-link active" href="/visualizacion">
+                <i class="fas fa-play-circle me-1"></i>Visualización
+            </a>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid viz-container">
+    <!-- Header -->
+    <div class="row mb-4">
+        <div class="col-12 text-center">
+            <h1 class="display-4 text-white">
+                <i class="fas fa-play-circle me-2"></i>
+                Visualización de Algoritmos
+            </h1>
+            <p class="lead text-white-50">Observa paso a paso cómo Merge Sort y Radix Sort ordenan las placas</p>
+        </div>
+    </div>
+
+    <!-- Controles -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="viz-card">
+                <h5 class="mb-3"><i class="fas fa-sliders-h me-2"></i>Controles</h5>
+                <div class="controls-row mb-3">
+                    <div>
+                        <label class="form-label mb-1 small">Tamaño de muestra</label>
+                        <select id="sample-size" class="form-select form-select-sm" style="width:100px;">
+                            <option value="8">8</option>
+                            <option value="10">10</option>
+                            <option value="15" selected>15</option>
+                            <option value="20">20</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="form-label mb-1 small">&nbsp;</label>
+                        <div>
+                            <button id="btn-load" class="btn btn-outline-primary btn-sm" onclick="cargarMuestra()">
+                                <i class="fas fa-database me-1"></i>Cargar Muestra
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex-grow-1">
+                        <label class="form-label mb-1 small">Velocidad</label>
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="fas fa-turtle text-muted"></i>
+                            <input type="range" id="speed-slider" class="form-range" min="1" max="10" value="3" style="width:180px;">
+                            <i class="fas fa-rabbit text-muted"></i>
+                            <span id="speed-label" class="speed-display badge bg-secondary">3x</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="controls-row mb-3">
+                    <button id="btn-start" class="btn btn-success btn-sm" onclick="iniciarAnimacion()" disabled>
+                        <i class="fas fa-play me-1"></i>Iniciar
+                    </button>
+                    <button id="btn-pause" class="btn btn-warning btn-sm" onclick="togglePause()" disabled>
+                        <i class="fas fa-pause me-1"></i>Pausar
+                    </button>
+                    <button id="btn-step" class="btn btn-info btn-sm" onclick="pasoAPaso()" disabled>
+                        <i class="fas fa-step-forward me-1"></i>Paso a Paso
+                    </button>
+                    <button id="btn-reset" class="btn btn-secondary btn-sm" onclick="reiniciar()">
+                        <i class="fas fa-redo me-1"></i>Reiniciar
+                    </button>
+                </div>
+                <div id="plate-list-preview" class="text-muted">Carga una muestra para comenzar...</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Canvas lado a lado -->
+    <div class="row mb-4">
+        <div class="col-md-6 mb-3">
+            <div class="viz-card">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h5 class="mb-0" style="color:#007bff;"><i class="fas fa-code-branch me-2"></i>Merge Sort</h5>
+                    <span id="merge-phase" class="phase-label bg-light text-muted">Esperando...</span>
+                </div>
+                <canvas id="canvas-merge" height="420"></canvas>
+                <div class="metric-display" id="merge-metrics">
+                    Comparaciones: 0 &nbsp;|&nbsp; Llamadas recursivas: 0 &nbsp;|&nbsp; Paso: 0
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 mb-3">
+            <div class="viz-card">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <h5 class="mb-0" style="color:#28a745;"><i class="fas fa-layer-group me-2"></i>Radix Sort</h5>
+                    <span id="radix-phase" class="phase-label bg-light text-muted">Esperando...</span>
+                </div>
+                <canvas id="canvas-radix" height="420"></canvas>
+                <div class="metric-display" id="radix-metrics">
+                    Operaciones: 0 &nbsp;|&nbsp; Pasada: 0/7 &nbsp;|&nbsp; Paso: 0
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resumen -->
+    <div class="row mb-4" id="summary-section" style="display:none;">
+        <div class="col-12">
+            <div class="viz-card text-center">
+                <h4><i class="fas fa-trophy me-2"></i>Resumen de la Visualización</h4>
+                <div id="summary-content"></div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+// ============================================================================
+// ESTADO GLOBAL
+// ============================================================================
+let plates = [];
+let mergeSteps = [];
+let radixSteps = [];
+let mergeIdx = 0;
+let radixIdx = 0;
+let isPlaying = false;
+let animFrameId = null;
+let lastStepTime = 0;
+let speed = 3;
+let mergeCtx, radixCtx;
+let mergeW, mergeH, radixW, radixH;
+
+// ============================================================================
+// UTILIDADES
+// ============================================================================
+function plateToNumeric(plate) {
+    const n = plate.replace('-', '').toUpperCase();
+    let v = 0;
+    for (let i = 0; i < n.length; i++) {
+        const ch = n.charCodeAt(i);
+        v = v * 36 + (ch >= 65 ? ch - 65 + 10 : ch - 48);
+    }
+    return v;
+}
+
+function getStepInterval() {
+    return Math.max(40, 700 - (speed - 1) * 73);
+}
+
+// ============================================================================
+// GRABAR PASOS - MERGE SORT
+// ============================================================================
+function recordMergeSortSteps(platesArr) {
+    const steps = [];
+    const arr = platesArr.map(p => ({ plate: p, value: plateToNumeric(p) }));
+    let comparisons = 0;
+    let recursiveCalls = 0;
+    let fullArr = arr.map(x => ({...x}));
+
+    function mergeSort(sub, startIdx) {
+        recursiveCalls++;
+        if (sub.length <= 1) return sub;
+
+        const mid = Math.floor(sub.length / 2);
+
+        steps.push({
+            type: 'divide',
+            desc: `Dividiendo [${startIdx}..${startIdx + sub.length - 1}] en medio=${startIdx + mid}`,
+            fullArray: fullArr.map(x => ({...x})),
+            highlight: { start: startIdx, end: startIdx + sub.length - 1, mid: startIdx + mid },
+            comparisons, recursiveCalls
+        });
+
+        const left = mergeSort(sub.slice(0, mid), startIdx);
+        const right = mergeSort(sub.slice(mid), startIdx + mid);
+
+        const merged = [];
+        let i = 0, j = 0;
+        while (i < left.length && j < right.length) {
+            comparisons++;
+            steps.push({
+                type: 'compare',
+                desc: `Comparando ${left[i].plate} vs ${right[j].plate}`,
+                fullArray: fullArr.map(x => ({...x})),
+                comparing: [startIdx + merged.length, -1],
+                compPlates: [left[i].plate, right[j].plate],
+                comparisons, recursiveCalls
+            });
+
+            if (left[i].value <= right[j].value) {
+                merged.push(left[i]); i++;
+            } else {
+                merged.push(right[j]); j++;
+            }
+        }
+        while (i < left.length) { merged.push(left[i]); i++; }
+        while (j < right.length) { merged.push(right[j]); j++; }
+
+        for (let k = 0; k < merged.length; k++) {
+            fullArr[startIdx + k] = {...merged[k]};
+        }
+
+        steps.push({
+            type: 'merge',
+            desc: `Fusionando [${startIdx}..${startIdx + merged.length - 1}]`,
+            fullArray: fullArr.map(x => ({...x})),
+            mergedRange: { start: startIdx, end: startIdx + merged.length - 1 },
+            comparisons, recursiveCalls
+        });
+
+        return merged;
+    }
+
+    mergeSort(arr, 0);
+    steps.push({
+        type: 'done',
+        desc: 'Merge Sort completado',
+        fullArray: fullArr.map(x => ({...x})),
+        comparisons, recursiveCalls
+    });
+    return steps;
+}
+
+// ============================================================================
+// GRABAR PASOS - RADIX SORT
+// ============================================================================
+function recordRadixSortSteps(platesArr) {
+    const steps = [];
+    let arr = platesArr.map(p => ({ plate: p, value: plateToNumeric(p) }));
+    let operations = 0;
+    const maxLen = 7;
+
+    function charToIndex(ch) {
+        if (ch === '') return 36;
+        if (ch >= '0' && ch <= '9') return ch.charCodeAt(0) - 48;
+        return ch.charCodeAt(0) - 65 + 10;
+    }
+
+    function getCharAt(plate, pos) {
+        const n = plate.replace('-', '').toUpperCase();
+        const idx = n.length - 1 - pos;
+        return idx < 0 ? '' : n[idx];
+    }
+
+    for (let pos = 0; pos < maxLen; pos++) {
+        const charPos = maxLen - 1 - pos;
+
+        steps.push({
+            type: 'pass_start',
+            desc: `Pasada ${pos + 1}/7: procesando posición ${charPos}`,
+            fullArray: arr.map(x => ({...x})),
+            currentPass: pos + 1,
+            charPos,
+            operations,
+            buckets: null,
+            activeIndex: -1
+        });
+
+        const buckets = Array.from({ length: 37 }, () => []);
+
+        for (let i = 0; i < arr.length; i++) {
+            operations++;
+            const ch = getCharAt(arr[i].plate, pos);
+            const bIdx = charToIndex(ch);
+            buckets[bIdx].push({...arr[i]});
+
+            steps.push({
+                type: 'distribute',
+                desc: `${arr[i].plate} → bucket[${ch || '∅'}]`,
+                fullArray: arr.map(x => ({...x})),
+                currentPass: pos + 1,
+                charPos,
+                operations,
+                buckets: buckets.map(b => b.map(x => ({...x}))),
+                activeIndex: i,
+                targetBucket: bIdx
+            });
+        }
+
+        arr = [];
+        for (const b of buckets) arr.push(...b);
+
+        steps.push({
+            type: 'collect',
+            desc: `Pasada ${pos + 1} completa - recolectando`,
+            fullArray: arr.map(x => ({...x})),
+            currentPass: pos + 1,
+            charPos,
+            operations,
+            buckets: null,
+            activeIndex: -1
+        });
+    }
+
+    steps.push({
+        type: 'done',
+        desc: 'Radix Sort completado',
+        fullArray: arr.map(x => ({...x})),
+        currentPass: 7,
+        operations,
+        buckets: null,
+        activeIndex: -1
+    });
+    return steps;
+}
+
+// ============================================================================
+// RENDERIZADO CANVAS - MERGE SORT
+// ============================================================================
+function renderMergeStep(step) {
+    const ctx = mergeCtx;
+    const w = mergeW;
+    const h = mergeH;
+    ctx.clearRect(0, 0, w, h);
+
+    const arr = step.fullArray;
+    const n = arr.length;
+    const maxVal = Math.max(...arr.map(x => x.value));
+    const pad = 30;
+    const barArea = w - pad * 2;
+    const gap = 2;
+    const barW = (barArea - gap * (n - 1)) / n;
+    const maxBarH = h - 100;
+    const baseY = h - 45;
+
+    // Descripcion
+    ctx.fillStyle = '#ffffff';
+    ctx.font = '12px sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText(step.desc, w / 2, 18);
+
+    // Dibujar barras
+    for (let i = 0; i < n; i++) {
+        const x = pad + i * (barW + gap);
+        const barH = (arr[i].value / maxVal) * maxBarH;
+        const y = baseY - barH;
+
+        let color = '#4a9eff';
+
+        if (step.type === 'divide' && step.highlight) {
+            if (i >= step.highlight.start && i <= step.highlight.end) {
+                color = '#6db3ff';
+            }
+            if (i < step.highlight.start || i > step.highlight.end) {
+                color = '#2a4a6e';
+            }
+        }
+
+        if (step.type === 'compare' && step.compPlates) {
+            if (arr[i].plate === step.compPlates[0] || arr[i].plate === step.compPlates[1]) {
+                color = '#ff6b6b';
+            }
+        }
+
+        if (step.type === 'merge' && step.mergedRange) {
+            if (i >= step.mergedRange.start && i <= step.mergedRange.end) {
+                color = '#51cf66';
+            }
+        }
+
+        if (step.type === 'done') {
+            color = '#51cf66';
+        }
+
+        ctx.fillStyle = color;
+        ctx.beginPath();
+        ctx.roundRect(x, y, barW, barH, [3, 3, 0, 0]);
+        ctx.fill();
+
+        // Placa debajo
+        ctx.save();
+        ctx.fillStyle = '#aaaacc';
+        ctx.font = `${Math.min(10, barW - 1)}px Courier New`;
+        ctx.textAlign = 'center';
+        ctx.translate(x + barW / 2, baseY + 8);
+        ctx.rotate(-Math.PI / 4);
+        ctx.fillText(arr[i].plate, 0, 0);
+        ctx.restore();
+    }
+
+    // Linea de division
+    if (step.type === 'divide' && step.highlight) {
+        const mx = pad + step.highlight.mid * (barW + gap) - gap / 2;
+        ctx.setLineDash([5, 5]);
+        ctx.strokeStyle = '#ffd43b';
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(mx, 25);
+        ctx.lineTo(mx, baseY);
+        ctx.stroke();
+        ctx.setLineDash([]);
+    }
+
+    // Metricas
+    document.getElementById('merge-metrics').innerHTML =
+        `Comparaciones: <strong>${step.comparisons}</strong> &nbsp;|&nbsp; Recursiones: <strong>${step.recursiveCalls}</strong> &nbsp;|&nbsp; Paso: <strong>${mergeIdx + 1}/${mergeSteps.length}</strong>`;
+
+    // Fase
+    const phaseEl = document.getElementById('merge-phase');
+    if (step.type === 'divide') { phaseEl.className = 'phase-label bg-info text-white'; phaseEl.textContent = 'Dividiendo'; }
+    else if (step.type === 'compare') { phaseEl.className = 'phase-label bg-danger text-white'; phaseEl.textContent = 'Comparando'; }
+    else if (step.type === 'merge') { phaseEl.className = 'phase-label bg-success text-white'; phaseEl.textContent = 'Fusionando'; }
+    else if (step.type === 'done') { phaseEl.className = 'phase-label bg-success text-white'; phaseEl.textContent = 'Completado'; }
+}
+
+// ============================================================================
+// RENDERIZADO CANVAS - RADIX SORT
+// ============================================================================
+function renderRadixStep(step) {
+    const ctx = radixCtx;
+    const w = radixW;
+    const h = radixH;
+    ctx.clearRect(0, 0, w, h);
+
+    const arr = step.fullArray;
+    const n = arr.length;
+    const maxVal = Math.max(...arr.map(x => x.value));
+    const pad = 30;
+    const barArea = w - pad * 2;
+    const gap = 2;
+    const barW = (barArea - gap * (n - 1)) / n;
+
+    const hasBuckets = step.buckets && step.type === 'distribute';
+    const mainH = hasBuckets ? h * 0.55 : h - 100;
+    const maxBarH = mainH - 50;
+    const baseY = mainH;
+
+    // Descripcion
+    ctx.fillStyle = '#ffffff';
+    ctx.font = '12px sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText(step.desc, w / 2, 18);
+
+    // Barras principales
+    for (let i = 0; i < n; i++) {
+        const x = pad + i * (barW + gap);
+        const barH = (arr[i].value / maxVal) * maxBarH;
+        const y = baseY - barH;
+
+        let color = '#28a745';
+
+        if (step.type === 'distribute' && i === step.activeIndex) {
+            color = '#ffd43b';
+        }
+
+        if (step.type === 'done') {
+            color = '#51cf66';
+        }
+
+        ctx.fillStyle = color;
+        ctx.beginPath();
+        ctx.roundRect(x, y, barW, barH, [3, 3, 0, 0]);
+        ctx.fill();
+
+        ctx.save();
+        ctx.fillStyle = '#aaaacc';
+        ctx.font = `${Math.min(10, barW - 1)}px Courier New`;
+        ctx.textAlign = 'center';
+        ctx.translate(x + barW / 2, baseY + 8);
+        ctx.rotate(-Math.PI / 4);
+        ctx.fillText(arr[i].plate, 0, 0);
+        ctx.restore();
+    }
+
+    // Buckets
+    if (hasBuckets) {
+        const bucketY = h * 0.62;
+        const bucketH = h - bucketY - 20;
+
+        // Solo buckets con contenido
+        const activeBuckets = [];
+        for (let b = 0; b < step.buckets.length; b++) {
+            if (step.buckets[b].length > 0) {
+                let label = b < 10 ? String(b) : (b < 36 ? String.fromCharCode(65 + b - 10) : '∅');
+                activeBuckets.push({ idx: b, label, items: step.buckets[b] });
+            }
+        }
+
+        if (activeBuckets.length > 0) {
+            const bucketW = (w - pad * 2) / activeBuckets.length;
+
+            ctx.strokeStyle = '#444';
+            ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(pad, bucketY - 5);
+            ctx.lineTo(w - pad, bucketY - 5);
+            ctx.stroke();
+
+            ctx.fillStyle = '#8888aa';
+            ctx.font = '10px sans-serif';
+            ctx.textAlign = 'center';
+            ctx.fillText('Buckets', w / 2, bucketY + 5);
+
+            for (let b = 0; b < activeBuckets.length; b++) {
+                const bx = pad + b * bucketW;
+                const bucket = activeBuckets[b];
+
+                ctx.strokeStyle = bucket.idx === step.targetBucket ? '#ffd43b' : '#555';
+                ctx.lineWidth = bucket.idx === step.targetBucket ? 2 : 1;
+                ctx.strokeRect(bx + 2, bucketY + 12, bucketW - 4, bucketH - 12);
+
+                ctx.fillStyle = '#ccccee';
+                ctx.font = '9px Courier New';
+                ctx.textAlign = 'center';
+                ctx.fillText(`[${bucket.label}]`, bx + bucketW / 2, bucketY + 24);
+
+                // Placas en el bucket
+                for (let p = 0; p < bucket.items.length; p++) {
+                    ctx.fillStyle = '#ffffff';
+                    ctx.font = '8px Courier New';
+                    ctx.fillText(bucket.items[p].plate, bx + bucketW / 2, bucketY + 36 + p * 11);
+                }
+            }
+        }
+    }
+
+    // Metricas
+    const pass = step.currentPass || 0;
+    document.getElementById('radix-metrics').innerHTML =
+        `Operaciones: <strong>${step.operations}</strong> &nbsp;|&nbsp; Pasada: <strong>${pass}/7</strong> &nbsp;|&nbsp; Paso: <strong>${radixIdx + 1}/${radixSteps.length}</strong>`;
+
+    const phaseEl = document.getElementById('radix-phase');
+    if (step.type === 'pass_start') { phaseEl.className = 'phase-label bg-info text-white'; phaseEl.textContent = `Pasada ${pass}`; }
+    else if (step.type === 'distribute') { phaseEl.className = 'phase-label bg-warning text-dark'; phaseEl.textContent = 'Distribuyendo'; }
+    else if (step.type === 'collect') { phaseEl.className = 'phase-label bg-primary text-white'; phaseEl.textContent = 'Recolectando'; }
+    else if (step.type === 'done') { phaseEl.className = 'phase-label bg-success text-white'; phaseEl.textContent = 'Completado'; }
+}
+
+// ============================================================================
+// CONTROLADOR DE ANIMACION
+// ============================================================================
+function animate(timestamp) {
+    if (!isPlaying) return;
+    if (!lastStepTime) lastStepTime = timestamp;
+
+    if (timestamp - lastStepTime >= getStepInterval()) {
+        lastStepTime = timestamp;
+        advanceStep();
+    }
+    animFrameId = requestAnimationFrame(animate);
+}
+
+function advanceStep() {
+    let mergeActive = mergeIdx < mergeSteps.length;
+    let radixActive = radixIdx < radixSteps.length;
+
+    if (mergeActive) {
+        renderMergeStep(mergeSteps[mergeIdx]);
+        mergeIdx++;
+    }
+    if (radixActive) {
+        renderRadixStep(radixSteps[radixIdx]);
+        radixIdx++;
+    }
+
+    if (!mergeActive && !radixActive) {
+        isPlaying = false;
+        cancelAnimationFrame(animFrameId);
+        mostrarResumen();
+    }
+}
+
+function mostrarResumen() {
+    const mergeFinal = mergeSteps[mergeSteps.length - 1];
+    const radixFinal = radixSteps[radixSteps.length - 1];
+
+    document.getElementById('summary-section').style.display = 'block';
+    document.getElementById('summary-content').innerHTML = `
+        <div class="row justify-content-center mt-3">
+            <div class="col-md-8">
+                <table class="table table-bordered">
+                    <thead class="table-dark">
+                        <tr><th>Métrica</th><th style="color:#4a9eff;">Merge Sort</th><th style="color:#51cf66;">Radix Sort</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Pasos totales</td><td>${mergeSteps.length}</td><td>${radixSteps.length}</td></tr>
+                        <tr><td>Comparaciones / Operaciones</td><td>${mergeFinal.comparisons}</td><td>${radixFinal.operations}</td></tr>
+                        <tr><td>Recursiones / Pasadas</td><td>${mergeFinal.recursiveCalls}</td><td>7</td></tr>
+                    </tbody>
+                </table>
+                <div class="alert ${mergeSteps.length < radixSteps.length ? 'alert-primary' : 'alert-success'} mt-2">
+                    <strong>${mergeSteps.length < radixSteps.length ? 'Merge Sort' : 'Radix Sort'}</strong>
+                    completó la animación en menos pasos.
+                </div>
+            </div>
+        </div>`;
+    document.getElementById('summary-section').scrollIntoView({ behavior: 'smooth' });
+
+    document.getElementById('btn-pause').disabled = true;
+    document.getElementById('btn-step').disabled = true;
+}
+
+// ============================================================================
+// CONTROLES
+// ============================================================================
+async function cargarMuestra() {
+    const n = parseInt(document.getElementById('sample-size').value);
+    const resp = await fetch(`/api/vehicles/random-sample?n=${n}`);
+    const data = await resp.json();
+    if (data.success) {
+        plates = data.data.map(v => v.placa);
+        document.getElementById('plate-list-preview').textContent = plates.join('  ');
+        document.getElementById('btn-start').disabled = false;
+        reiniciar();
+    }
+}
+
+function iniciarAnimacion() {
+    if (plates.length === 0) return;
+
+    reiniciar();
+    mergeSteps = recordMergeSortSteps([...plates]);
+    radixSteps = recordRadixSortSteps([...plates]);
+    mergeIdx = 0;
+    radixIdx = 0;
+    isPlaying = true;
+    lastStepTime = 0;
+
+    document.getElementById('btn-pause').disabled = false;
+    document.getElementById('btn-step').disabled = false;
+    document.getElementById('btn-start').disabled = true;
+
+    animFrameId = requestAnimationFrame(animate);
+}
+
+function togglePause() {
+    if (isPlaying) {
+        isPlaying = false;
+        cancelAnimationFrame(animFrameId);
+        document.getElementById('btn-pause').innerHTML = '<i class="fas fa-play me-1"></i>Reanudar';
+        document.getElementById('btn-step').disabled = false;
+    } else {
+        isPlaying = true;
+        lastStepTime = 0;
+        document.getElementById('btn-pause').innerHTML = '<i class="fas fa-pause me-1"></i>Pausar';
+        animFrameId = requestAnimationFrame(animate);
+    }
+}
+
+function pasoAPaso() {
+    if (isPlaying) {
+        isPlaying = false;
+        cancelAnimationFrame(animFrameId);
+        document.getElementById('btn-pause').innerHTML = '<i class="fas fa-play me-1"></i>Reanudar';
+    }
+    advanceStep();
+}
+
+function reiniciar() {
+    isPlaying = false;
+    cancelAnimationFrame(animFrameId);
+    mergeIdx = 0;
+    radixIdx = 0;
+    mergeSteps = [];
+    radixSteps = [];
+
+    if (mergeCtx) mergeCtx.clearRect(0, 0, mergeW, mergeH);
+    if (radixCtx) radixCtx.clearRect(0, 0, radixW, radixH);
+
+    document.getElementById('merge-metrics').innerHTML = 'Comparaciones: 0 &nbsp;|&nbsp; Recursiones: 0 &nbsp;|&nbsp; Paso: 0';
+    document.getElementById('radix-metrics').innerHTML = 'Operaciones: 0 &nbsp;|&nbsp; Pasada: 0/7 &nbsp;|&nbsp; Paso: 0';
+    document.getElementById('merge-phase').className = 'phase-label bg-light text-muted';
+    document.getElementById('merge-phase').textContent = 'Esperando...';
+    document.getElementById('radix-phase').className = 'phase-label bg-light text-muted';
+    document.getElementById('radix-phase').textContent = 'Esperando...';
+    document.getElementById('summary-section').style.display = 'none';
+
+    document.getElementById('btn-pause').innerHTML = '<i class="fas fa-pause me-1"></i>Pausar';
+    document.getElementById('btn-pause').disabled = true;
+    document.getElementById('btn-step').disabled = true;
+    if (plates.length > 0) document.getElementById('btn-start').disabled = false;
+}
+
+// ============================================================================
+// INICIALIZACION
+// ============================================================================
+function setupCanvas(canvas) {
+    const dpr = window.devicePixelRatio || 1;
+    const rect = canvas.getBoundingClientRect();
+    canvas.width = rect.width * dpr;
+    canvas.height = rect.height * dpr;
+    const ctx = canvas.getContext('2d');
+    ctx.scale(dpr, dpr);
+    return { ctx, w: rect.width, h: rect.height };
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const m = setupCanvas(document.getElementById('canvas-merge'));
+    mergeCtx = m.ctx; mergeW = m.w; mergeH = m.h;
+
+    const r = setupCanvas(document.getElementById('canvas-radix'));
+    radixCtx = r.ctx; radixW = r.w; radixH = r.h;
+
+    document.getElementById('speed-slider').addEventListener('input', (e) => {
+        speed = parseInt(e.target.value);
+        document.getElementById('speed-label').textContent = speed + 'x';
+    });
+});
+
+window.addEventListener('resize', () => {
+    const m = setupCanvas(document.getElementById('canvas-merge'));
+    mergeCtx = m.ctx; mergeW = m.w; mergeH = m.h;
+    const r = setupCanvas(document.getElementById('canvas-radix'));
+    radixCtx = r.ctx; radixW = r.w; radixH = r.h;
+
+    if (mergeIdx > 0 && mergeIdx <= mergeSteps.length) renderMergeStep(mergeSteps[mergeIdx - 1]);
+    if (radixIdx > 0 && radixIdx <= radixSteps.length) renderRadixStep(radixSteps[radixIdx - 1]);
+});
+</script>
+{% endblock %}

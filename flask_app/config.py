@@ -10,6 +10,7 @@ class Config:
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'dev-secret-key-change-in-production'
     DEBUG = False
     TESTING = False
+    JSON_AS_ASCII = False
 
 
 class DevelopmentConfig(Config):

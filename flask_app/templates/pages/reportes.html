@@ -100,6 +100,10 @@
                 <i class="fas fa-chart-line me-1"></i>
                 Reportes
             </a>
+            <a class="nav-link" href="/visualizacion">
+                <i class="fas fa-play-circle me-1"></i>
+                Visualización
+            </a>
         </div>
     </div>
 </nav>
@@ -204,20 +208,14 @@
                         <i class="fas fa-traffic-light me-2"></i>
                         Distribución por Estado ANT
                     </h5>
-                    <div id="chart-estados"></div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Distribución por Hora del Día -->
-        <div class="row mb-4">
-            <div class="col-12">
-                <div class="chart-card">
-                    <h5 class="chart-title">
-                        <i class="fas fa-clock me-2"></i>
-                        Distribución de Búsquedas por Hora del Día
-                    </h5>
-                    <div id="chart-horas"></div>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div id="chart-estados"></div>
+                        </div>
+                        <div class="col-md-4 d-flex align-items-center">
+                            <div id="info-estados" class="w-100"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -230,7 +228,14 @@
                         <i class="fas fa-map-marker-alt me-2"></i>
                         TOP 10 Peajes con Más Capturas
                     </h5>
-                    <div id="chart-peajes"></div>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div id="chart-peajes"></div>
+                        </div>
+                        <div class="col-md-4 d-flex align-items-center">
+                            <div id="info-peajes" class="w-100"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -243,20 +248,54 @@
                         <i class="fas fa-tachometer-alt me-2"></i>
                         Tiempos Promedio de Algoritmos
                     </h5>
-                    <div id="chart-tiempos"></div>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div id="chart-tiempos"></div>
+                        </div>
+                        <div class="col-md-4 d-flex align-items-center">
+                            <div id="info-tiempos" class="w-100"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Búsquedas por Día -->
+        <!-- Iteraciones Promedio por Algoritmo -->
         <div class="row mb-4">
             <div class="col-12">
                 <div class="chart-card">
                     <h5 class="chart-title">
-                        <i class="fas fa-calendar-alt me-2"></i>
-                        Búsquedas por Día
+                        <i class="fas fa-redo me-2"></i>
+                        Iteraciones Promedio por Algoritmo
                     </h5>
-                    <div id="chart-dias"></div>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div id="chart-iteraciones"></div>
+                        </div>
+                        <div class="col-md-4 d-flex align-items-center">
+                            <div id="info-iteraciones" class="w-100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Comparaciones / Operaciones Promedio -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="chart-card">
+                    <h5 class="chart-title">
+                        <i class="fas fa-exchange-alt me-2"></i>
+                        Comparaciones / Operaciones Promedio
+                    </h5>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div id="chart-comparaciones"></div>
+                        </div>
+                        <div class="col-md-4 d-flex align-items-center">
+                            <div id="info-comparaciones" class="w-100"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -285,10 +324,10 @@ async function cargarAnalisis() {
             mostrarMetricasPrincipales(data);
             mostrarTopAlertas(data.top_alertas);
             generarGraficoEstados(data.distribucion_estados);
-            generarGraficoHoras(data.distribucion_horas);
             generarGraficoPeajes(data.top_peajes);
             generarGraficoTiempos(data.tiempos_promedio);
-            generarGraficoDias(data.busquedas_por_dia);
+            generarGraficoIteraciones(data.promedio_iteraciones);
+            generarGraficoComparaciones(data.promedio_comparaciones);
 
             // Mostrar contenido
             document.getElementById('loading-reportes').style.display = 'none';
@@ -357,6 +396,7 @@ function mostrarTopAlertas(alertas) {
 function generarGraficoEstados(estados) {
     const labels = Object.keys(estados);
     const values = Object.values(estados);
+    const total = values.reduce((a, b) => a + b, 0);
 
     const colors = labels.map(label => {
         if (label === 'Habilitada') return '#28a745';
@@ -377,57 +417,60 @@ function generarGraficoEstados(estados) {
     const layout = {
         height: 400,
         margin: { t: 20, b: 20, l: 20, r: 20 },
-        showlegend: true
+        showlegend: false
     };
 
     Plotly.newPlot('chart-estados', data, layout, {responsive: true});
-}
 
-function generarGraficoHoras(horas) {
-    const horasOrdenadas = Array.from({length: 24}, (_, i) => i);
-    const values = horasOrdenadas.map(h => horas[h] || 0);
+    let rows = labels.map((label, i) => {
+        const pct = ((values[i] / total) * 100).toFixed(1);
+        return `<tr>
+            <td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:${colors[i]};margin-right:6px;"></span>${label}</td>
+            <td class="text-end">${values[i].toLocaleString()}</td>
+            <td class="text-end">${pct}%</td>
+        </tr>`;
+    }).join('');
 
-    const data = [{
-        x: horasOrdenadas.map(h => h + ':00'),
-        y: values,
-        type: 'bar',
-        marker: {
-            color: values,
-            colorscale: 'Viridis'
-        }
-    }];
-
-    const layout = {
-        height: 400,
-        xaxis: { title: 'Hora del Día' },
-        yaxis: { title: 'Número de Búsquedas' },
-        margin: { t: 20, b: 60, l: 60, r: 20 }
-    };
-
-    Plotly.newPlot('chart-horas', data, layout, {responsive: true});
+    document.getElementById('info-estados').innerHTML = `
+        <table class="table table-sm table-borderless mb-0">
+            <thead><tr><th>Estado</th><th class="text-end">Cantidad</th><th class="text-end">%</th></tr></thead>
+            <tbody>${rows}</tbody>
+            <tfoot><tr class="fw-bold"><td>Total</td><td class="text-end">${total.toLocaleString()}</td><td class="text-end">100%</td></tr></tfoot>
+        </table>`;
 }
 
 function generarGraficoPeajes(peajes) {
     const labels = Object.keys(peajes).slice(0, 10);
     const values = Object.values(peajes).slice(0, 10);
+    const total = values.reduce((a, b) => a + b, 0);
 
     const data = [{
         x: values,
         y: labels,
         type: 'bar',
         orientation: 'h',
-        marker: {
-            color: '#667eea'
-        }
+        marker: { color: '#667eea' }
     }];
 
     const layout = {
         height: 400,
-        xaxis: { title: 'Número de Capturas' },
+        xaxis: { title: 'Capturas' },
         margin: { t: 20, b: 60, l: 150, r: 20 }
     };
 
     Plotly.newPlot('chart-peajes', data, layout, {responsive: true});
+
+    let rows = labels.map((label, i) => {
+        const pct = ((values[i] / total) * 100).toFixed(1);
+        return `<tr><td>${label}</td><td class="text-end">${values[i]}</td><td class="text-end">${pct}%</td></tr>`;
+    }).join('');
+
+    document.getElementById('info-peajes').innerHTML = `
+        <div style="max-height:400px;overflow-y:auto;">
+        <table class="table table-sm table-borderless mb-0" style="font-size:0.85rem;">
+            <thead><tr><th>Peaje</th><th class="text-end">N°</th><th class="text-end">%</th></tr></thead>
+            <tbody>${rows}</tbody>
+        </table></div>`;
 }
 
 function generarGraficoTiempos(tiempos) {
@@ -435,49 +478,108 @@ function generarGraficoTiempos(tiempos) {
         x: ['Merge Sort', 'Radix Sort'],
         y: [tiempos.merge_sort, tiempos.radix_sort],
         type: 'bar',
-        marker: {
-            color: ['#007bff', '#28a745']
-        },
+        marker: { color: ['#007bff', '#28a745'] },
         text: [tiempos.merge_sort.toFixed(4) + 'ms', tiempos.radix_sort.toFixed(4) + 'ms'],
-        textposition: 'auto'
+        textposition: 'outside',
+        cliponaxis: false
     }];
 
+    const maxVal = Math.max(tiempos.merge_sort, tiempos.radix_sort);
     const layout = {
         height: 400,
-        yaxis: { title: 'Tiempo Promedio (ms)' },
-        margin: { t: 20, b: 60, l: 60, r: 20 }
+        yaxis: { title: 'Tiempo Promedio (ms)', range: [0, maxVal * 1.25] },
+        margin: { t: 30, b: 60, l: 60, r: 20 },
+        showlegend: false
     };
 
     Plotly.newPlot('chart-tiempos', data, layout, {responsive: true});
+
+    const diff = Math.abs(tiempos.merge_sort - tiempos.radix_sort);
+    const faster = tiempos.merge_sort < tiempos.radix_sort ? 'Merge Sort' : 'Radix Sort';
+    const slower = tiempos.merge_sort < tiempos.radix_sort ? 'Radix Sort' : 'Merge Sort';
+    const pct = ((diff / Math.max(tiempos.merge_sort, tiempos.radix_sort)) * 100).toFixed(2);
+
+    document.getElementById('info-tiempos').innerHTML = `
+        <table class="table table-sm table-borderless mb-3">
+            <thead><tr><th>Algoritmo</th><th class="text-end">Tiempo</th></tr></thead>
+            <tbody>
+                <tr><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#007bff;margin-right:6px;"></span>Merge Sort</td><td class="text-end">${tiempos.merge_sort.toFixed(4)} ms</td></tr>
+                <tr><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#28a745;margin-right:6px;"></span>Radix Sort</td><td class="text-end">${tiempos.radix_sort.toFixed(4)} ms</td></tr>
+            </tbody>
+        </table>
+        <div class="alert alert-info py-2 px-3 mb-0" style="font-size:0.85rem;">
+            <strong>${faster}</strong> es <strong>${pct}%</strong> mas rapido que ${slower} en tiempo promedio.
+        </div>`;
 }
 
-function generarGraficoDias(dias) {
-    const labels = Object.keys(dias).sort();
-    const values = labels.map(d => dias[d]);
-
+function generarGraficoIteraciones(iteraciones) {
     const data = [{
-        x: labels,
-        y: values,
-        type: 'scatter',
-        mode: 'lines+markers',
-        line: {
-            color: '#667eea',
-            width: 3
-        },
-        marker: {
-            size: 8,
-            color: '#764ba2'
-        }
+        x: ['Merge Sort', 'Radix Sort'],
+        y: [iteraciones.merge_sort, iteraciones.radix_sort],
+        type: 'bar',
+        marker: { color: ['#007bff', '#28a745'] },
+        text: [iteraciones.merge_sort.toLocaleString(), iteraciones.radix_sort.toLocaleString()],
+        textposition: 'outside',
+        cliponaxis: false
     }];
 
+    const maxVal = Math.max(iteraciones.merge_sort, iteraciones.radix_sort);
     const layout = {
         height: 400,
-        xaxis: { title: 'Fecha' },
-        yaxis: { title: 'Número de Búsquedas' },
-        margin: { t: 20, b: 60, l: 60, r: 20 }
+        yaxis: { title: 'Promedio de Iteraciones', range: [0, maxVal * 1.25] },
+        margin: { t: 30, b: 60, l: 70, r: 20 },
+        showlegend: false
     };
 
-    Plotly.newPlot('chart-dias', data, layout, {responsive: true});
+    Plotly.newPlot('chart-iteraciones', data, layout, {responsive: true});
+
+    document.getElementById('info-iteraciones').innerHTML = `
+        <table class="table table-sm table-borderless mb-3">
+            <thead><tr><th>Algoritmo</th><th class="text-end">Promedio</th></tr></thead>
+            <tbody>
+                <tr><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#007bff;margin-right:6px;"></span>Merge Sort</td><td class="text-end">${iteraciones.merge_sort.toLocaleString()}</td></tr>
+                <tr><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#28a745;margin-right:6px;"></span>Radix Sort</td><td class="text-end">${iteraciones.radix_sort.toLocaleString()}</td></tr>
+            </tbody>
+        </table>
+        <div class="small text-muted px-1">
+            <p class="mb-1"><strong>Merge Sort:</strong> Llamadas recursivas para dividir y ordenar el arreglo. Complejidad O(n log n).</p>
+            <p class="mb-0"><strong>Radix Sort:</strong> Pasadas completas sobre el arreglo, una por cada digito de la placa (7 caracteres).</p>
+        </div>`;
+}
+
+function generarGraficoComparaciones(comparaciones) {
+    const data = [{
+        x: ['Merge Sort', 'Radix Sort'],
+        y: [comparaciones.merge_sort, comparaciones.radix_sort],
+        type: 'bar',
+        marker: { color: ['#007bff', '#28a745'] },
+        text: [comparaciones.merge_sort.toLocaleString(), comparaciones.radix_sort.toLocaleString()],
+        textposition: 'outside',
+        cliponaxis: false
+    }];
+
+    const maxVal = Math.max(comparaciones.merge_sort, comparaciones.radix_sort);
+    const layout = {
+        height: 400,
+        yaxis: { title: 'Promedio de Operaciones', range: [0, maxVal * 1.25] },
+        margin: { t: 30, b: 60, l: 70, r: 20 },
+        showlegend: false
+    };
+
+    Plotly.newPlot('chart-comparaciones', data, layout, {responsive: true});
+
+    document.getElementById('info-comparaciones').innerHTML = `
+        <table class="table table-sm table-borderless mb-3">
+            <thead><tr><th>Algoritmo</th><th class="text-end">Promedio</th></tr></thead>
+            <tbody>
+                <tr><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#007bff;margin-right:6px;"></span>Merge Sort</td><td class="text-end">${comparaciones.merge_sort.toLocaleString()}</td></tr>
+                <tr><td><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#28a745;margin-right:6px;"></span>Radix Sort</td><td class="text-end">${comparaciones.radix_sort.toLocaleString()}</td></tr>
+            </tbody>
+        </table>
+        <div class="small text-muted px-1">
+            <p class="mb-1"><strong>Merge Sort:</strong> Comparaciones entre elementos durante la fase de mezcla (merge).</p>
+            <p class="mb-0"><strong>Radix Sort:</strong> Operaciones de conteo y distribucion por cada digito procesado.</p>
+        </div>`;
 }
 </script>
 {% endblock %}

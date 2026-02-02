@@ -68,6 +68,12 @@ def reportes():
     return render_template('pages/reportes.html')
 
 
+@app.route('/visualizacion')
+def visualizacion():
+    """Página de visualización animada de algoritmos de ordenamiento."""
+    return render_template('pages/visualizacion.html')
+
+
 @app.route('/peaje/buscar', methods=['POST'])
 def buscar_placa():
     """
@@ -100,13 +106,15 @@ def buscar_placa():
                 'total_time': round(result['merge_sort_result']['total_time_ms'], 4),
                 'sort_time': round(result['merge_sort_result']['sort_time_ms'], 4),
                 'search_time': round(result['merge_sort_result']['search_time_ms'], 4),
-                'comparisons': result['merge_sort_result']['total_comparisons']
+                'comparisons': result['merge_sort_result']['total_comparisons'],
+                'recursive_calls': result['merge_sort_result']['recursive_calls']
             },
             'radix_sort': {
                 'total_time': round(result['radix_sort_result']['total_time_ms'], 4),
                 'sort_time': round(result['radix_sort_result']['sort_time_ms'], 4),
                 'search_time': round(result['radix_sort_result']['search_time_ms'], 4),
-                'operations': result['radix_sort_result']['sort_operations']
+                'operations': result['radix_sort_result']['sort_operations'],
+                'passes': result['radix_sort_result']['passes']
             }
         }
     }
@@ -133,6 +141,20 @@ def get_random_vehicle():
     df = db.get_all_vehicles()
     random_vehicle = df.sample(1).to_dict('records')[0]
     return jsonify({'success': True, 'data': random_vehicle})
+
+
+@app.route('/api/vehicles/random-sample')
+def get_random_sample():
+    """Retorna N vehículos aleatorios para la visualización de algoritmos."""
+    n = request.args.get('n', 15, type=int)
+    n = min(max(n, 5), 30)
+    db = get_database()
+    df = db.get_all_vehicles()
+    sample = df.sample(min(n, len(df))).to_dict('records')
+    return jsonify({
+        'success': True,
+        'data': [{'placa': v['placa']} for v in sample]
+    })
 
 
 @app.route('/api/search/history')
@@ -215,6 +237,18 @@ def get_analisis_datos():
     # --- ANÁLISIS 9: Top 10 Peajes con Más Capturas ---
     top_peajes = df[df['found'] == True]['peaje_ciudad'].value_counts().head(10).to_dict()
 
+    # --- ANÁLISIS 10: Promedio de Iteraciones (recursive_calls / passes) ---
+    avg_merge_iterations = round(df['merge_recursive_calls'].mean(), 2) if 'merge_recursive_calls' in df.columns else 0
+    avg_radix_iterations = round(df['radix_passes'].mean(), 2) if 'radix_passes' in df.columns else 0
+
+    # --- ANÁLISIS 11: Promedio de Comparaciones / Operaciones ---
+    avg_merge_comparisons = round(df['merge_comparisons'].mean(), 2) if 'merge_comparisons' in df.columns else 0
+    avg_radix_operations = round(df['radix_operations'].mean(), 2) if 'radix_operations' in df.columns else 0
+
+    # --- ANÁLISIS 12: Promedio de comparaciones de búsqueda binaria ---
+    avg_merge_search_comp = round(df['merge_search_comparisons'].mean(), 2) if 'merge_search_comparisons' in df.columns else 0
+    avg_radix_search_comp = round(df['radix_search_comparisons'].mean(), 2) if 'radix_search_comparisons' in df.columns else 0
+
     # Respuesta
     analisis = {
         'success': True,
@@ -230,7 +264,19 @@ def get_analisis_datos():
             'radix_sort': round(tiempo_radix_promedio, 4)
         },
         'busquedas_por_dia': busquedas_por_dia,
-        'top_peajes': top_peajes
+        'top_peajes': top_peajes,
+        'promedio_iteraciones': {
+            'merge_sort': avg_merge_iterations,
+            'radix_sort': avg_radix_iterations
+        },
+        'promedio_comparaciones': {
+            'merge_sort': avg_merge_comparisons,
+            'radix_sort': avg_radix_operations
+        },
+        'promedio_busqueda_binaria': {
+            'merge_sort': avg_merge_search_comp,
+            'radix_sort': avg_radix_search_comp
+        }
     }
 
     return jsonify(analisis)

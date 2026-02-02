@@ -147,7 +147,8 @@ def search_with_merge_sort(vehicles: List[Dict], target_plate: str) -> Dict:
         'total_time_ms': sort_time_ms + search_time_ms,
         'sort_comparisons': sort_metrics['comparisons'],
         'search_comparisons': result['_search_comparisons'] if result else 0,
-        'total_comparisons': sort_metrics['comparisons'] + (result['_search_comparisons'] if result else 0)
+        'total_comparisons': sort_metrics['comparisons'] + (result['_search_comparisons'] if result else 0),
+        'recursive_calls': sort_metrics['recursive_calls']
     }
 
     return response
@@ -207,7 +208,8 @@ def search_with_radix_sort(vehicles: List[Dict], target_plate: str) -> Dict:
         'search_time_ms': search_time_ms,
         'total_time_ms': sort_time_ms + search_time_ms,
         'sort_operations': sort_metrics['operations'],
-        'search_comparisons': result['_search_comparisons'] if result else 0
+        'search_comparisons': result['_search_comparisons'] if result else 0,
+        'passes': sort_metrics['passes']
     }
 
     return response
